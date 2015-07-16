@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20150716231029) do
 
-  create_table "paintings", force: true do |t|
+  create_table "paintings", force: :cascade do |t|
     t.string   "artist"
     t.string   "title"
     t.string   "time_frame"
