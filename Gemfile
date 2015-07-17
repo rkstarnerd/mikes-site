@@ -13,6 +13,7 @@ gem 'bcrypt-ruby'
 gem 'fabrication', '~> 2.13.1'
 gem 'faker', '~> 1.4.3'
 gem 'haml', '~> 4.0.6'
+gem 'haml-rails', '~> 0.9.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
