@@ -1,3 +1,3 @@
 MikesSite::Application.routes.draw do
-  root 'painting#index'
+  root 'paintings#index'
 end
