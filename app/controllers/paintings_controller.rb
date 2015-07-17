@@ -1,0 +1,4 @@
+
+class PaintingsController < ApplicationController
+  
+end
