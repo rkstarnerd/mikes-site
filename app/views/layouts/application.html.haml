@@ -33,14 +33,14 @@
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
             %li
-              %a{:href => "about.html"} About
+              %a{:href => "about.html"} Artist Statements
             %li
-              %a{:href => "services.html"} Services
+              %a{:href => "services.html"} Reviews
             %li
-              %a{:href => "contact.html"} Contact
+              %a{:href => "contact.html"} CV
             %li.dropdown
               %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                Portfolio
+                Contact
                 %b.caret
               %ul.dropdown-menu
                 %li
@@ -55,7 +55,7 @@
                   %a{:href => "portfolio-item.html"} Single Portfolio Item
             %li.dropdown
               %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                Blog
+                Links
                 %b.caret
               %ul.dropdown-menu
                 %li
@@ -64,21 +64,6 @@
                   %a{:href => "blog-home-2.html"} Blog Home 2
                 %li
                   %a{:href => "blog-post.html"} Blog Post
-            %li.dropdown
-              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                Other Pages
-                %b.caret
-              %ul.dropdown-menu
-                %li
-                  %a{:href => "full-width.html"} Full Width Page
-                %li
-                  %a{:href => "sidebar.html"} Sidebar Page
-                %li
-                  %a{:href => "faq.html"} FAQ
-                %li
-                  %a{:href => "404.html"} 404
-                %li
-                  %a{:href => "pricing.html"} Pricing Table
   = yield
   %footer
     .row
