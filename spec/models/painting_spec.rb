@@ -6,4 +6,5 @@ describe Painting do
   it { should validate_presence_of(:time_frame) }
   it { should validate_presence_of(:medium) }
   it { should validate_presence_of(:surface) }
+  it { should belong_to           (:category) }
 end
