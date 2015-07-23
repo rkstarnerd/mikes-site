@@ -14,4 +14,4 @@ category_list.each do |id, name|
   Category.create(id: id, name: name)
 end
 
-Painting.create(artist: 'Michael Dixon', title: 'Bloomington 3', time_frame: '1997', medium: 'oil', surface: 'canvas', small_img_url: , large_img_url, height: 80, width: 60, category_id: 1)
+Painting.create(artist: 'Michael Dixon', title: 'Bloomington 3', time_frame: '1997', medium: 'oil', surface: 'canvas', small_img_url: "", large_img_url: "", height: 80, width: 60, category_id: 1)
