@@ -21,13 +21,13 @@
         %li #{@painting.title}
         %li #{@painting.time_frame}
         %li #{@painting.medium} on #{@painting.surface}
-        %li Height: #{@painting.height}, Width #{@painting.width}
+        %li Height: #{@painting.height}, Width: #{@painting.width}
   / /.row
   / Related Projects Row
   .row
     .col-lg-12
       %h3.page-header #{@painting.category.name}
-    - @painting.category.paintings.shuffle.each do |painting|
+    - @painting.category.paintings.shuffle.first(4).each do |painting|
       .col-sm-3.col-xs-6
         %a{:href => "#"}
           %img.img-responsive.img-hover.img-related{:alt => "", :src => "#{painting_path(painting)}"}
