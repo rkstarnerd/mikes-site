@@ -20,13 +20,13 @@ ActiveRecord::Schema.define(version: 20150723000546) do
   end
 
   create_table "paintings", force: :cascade do |t|
-    t.string   "artist",        limit: 255
-    t.string   "title",         limit: 255
-    t.string   "time_frame",    limit: 255
-    t.string   "medium",        limit: 255
-    t.string   "surface",       limit: 255
-    t.string   "small_img_url", limit: 255
-    t.string   "large_img_url", limit: 255
+    t.string   "artist"
+    t.string   "title"
+    t.string   "time_frame"
+    t.string   "medium"
+    t.string   "surface"
+    t.string   "small_img_url"
+    t.string   "large_img_url"
     t.integer  "height"
     t.integer  "weight"
     t.datetime "created_at"
