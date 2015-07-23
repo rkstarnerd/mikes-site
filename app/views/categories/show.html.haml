@@ -14,13 +14,13 @@
   - @category.paintings.each do |painting|
     .row
       .col-md-7
-        %a{:href => ""}
+        %a{:href => "#{painting_path(painting.id)}"}
           %img.img-responsive.img-hover{:alt => "", :src => painting.small_img_url}
       .col-md-5
         %h3 #{painting.title}
         %h4 #{painting.time_frame}
         %br
-        %a.btn.btn-primary{:href => "portfolio-item.html"}
+        %a.btn.btn-primary{:href => "#{painting_path(painting.id)}"}
           View Painting
     / /.row
     %hr
