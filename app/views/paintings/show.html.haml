@@ -4,58 +4,30 @@
   .row
     .col-lg-12
       %h1.page-header
-        Portfolio Item
-        %small Subheading
+        = @painting.title
+        %small #{@painting.time_frame}
       %ol.breadcrumb
         %li
           %a{:href => "index.html"} Home
-        %li.active Portfolio Item
+        %li.active #{@painting.title}
   / /.row
   / Portfolio Item Row
   .row
     .col-md-8
-      #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
-        / Indicators
-        %ol.carousel-indicators
-          %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
-          %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
-          %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
-        / Wrapper for slides
-        .carousel-inner
-          .item.active
-            %img.img-responsive{:alt => "", :src => "http://placehold.it/750x500"}
-          .item
-            %img.img-responsive{:alt => "", :src => "http://placehold.it/750x500"}
-          .item
-            %img.img-responsive{:alt => "", :src => "http://placehold.it/750x500"}
-        / Controls
-        %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-example-generic"}
-          %span.glyphicon.glyphicon-chevron-left
-        %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-example-generic"}
-          %span.glyphicon.glyphicon-chevron-right
+      = @painting.large_img_url
     .col-md-4
-      %h3 Project Description
-      %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.
-      %h3 Project Details
+      %h3 #{@painting.artist}
       %ul
-        %li Lorem Ipsum
-        %li Dolor Sit Amet
-        %li Consectetur
-        %li Adipiscing Elit
+        %li #{@painting.title}
+        %li #{@painting.time_frame}
+        %li #{@painting.medium} on #{@painting.surface}
+        %li Height: #{@painting.height}, Width #{@painting.width}
   / /.row
   / Related Projects Row
   .row
     .col-lg-12
-      %h3.page-header Related Projects
-    .col-sm-3.col-xs-6
-      %a{:href => "#"}
-        %img.img-responsive.img-hover.img-related{:alt => "", :src => "http://placehold.it/500x300"}
-    .col-sm-3.col-xs-6
-      %a{:href => "#"}
-        %img.img-responsive.img-hover.img-related{:alt => "", :src => "http://placehold.it/500x300"}
-    .col-sm-3.col-xs-6
-      %a{:href => "#"}
-        %img.img-responsive.img-hover.img-related{:alt => "", :src => "http://placehold.it/500x300"}
-    .col-sm-3.col-xs-6
-      %a{:href => "#"}
-        %img.img-responsive.img-hover.img-related{:alt => "", :src => "http://placehold.it/500x300"}
+      %h3.page-header #{@painting.category.name}
+    - @painting.category.paintings.shuffle.each do |painting|
+      .col-sm-3.col-xs-6
+        %a{:href => "#"}
+          %img.img-responsive.img-hover.img-related{:alt => "", :src => "#{painting_path(painting)}"}
