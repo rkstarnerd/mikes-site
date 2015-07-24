@@ -33,37 +33,40 @@
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav.navbar-right
             %li
-              %a{:href => "about.html"} Artist Statements
+              %a{:href => "#{statements_path}"} Artist Statements
             %li
-              %a{:href => "services.html"} Reviews
+              %a{:href => "#{reviews_path}"} Reviews
             %li
-              %a{:href => "contact.html"} CV
-            %li.dropdown
-              %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
-                Contact
-                %b.caret
-              %ul.dropdown-menu
-                %li
-                  %a{:href => "portfolio-1-col.html"} 1 Column Portfolio
-                %li
-                  %a{:href => "portfolio-2-col.html"} 2 Column Portfolio
-                %li
-                  %a{:href => "portfolio-3-col.html"} 3 Column Portfolio
-                %li
-                  %a{:href => "portfolio-4-col.html"} 4 Column Portfolio
-                %li
-                  %a{:href => "portfolio-item.html"} Single Portfolio Item
+              %a{:href => "#{cv_path}"} CV
+            %li
+              %a{:href => "#{contact_path}"} Contact
             %li.dropdown
               %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
                 Links
                 %b.caret
               %ul.dropdown-menu
                 %li
-                  %a{:href => "blog-home-1.html"} Blog Home 1
+                  %a{:href => "http://www.jackmeiergallery.com/"} Jack Meier Gallery
                 %li
-                  %a{:href => "blog-home-2.html"} Blog Home 2
+                  %a{:href => "http://www.barrettart.com/"} Peter Barrett
                 %li
-                  %a{:href => "blog-post.html"} Blog Post
+                  %a{:href => "http://matthewchoberka.com/"} Matthew Choberka
+                %li
+                  %a{:href => "http://www.frednocella.com/"} Fred Nocella
+                %li
+                  %a{:href => "http://nicholasknight.net/"} Nicholas Knight
+                %li
+                  %a{:href => "http://sarahsands.com/blog/"} Sarah Sands
+                %li
+                  %a{:href => "http://www.davidkiddpaintings.bmyg.net/"} David Kidd
+                %li
+                  %a{:href => "http://www.perryrubenstein.com/artists/santiago-cucullu/"} Santiago Cucullu
+                %li
+                  %a{:href => "http://www.chorographics.com/"} Tom Allnutt, GIS
+                %li
+                  %a{:href => "http://picasaweb.google.com/tom.allnutt"} Tom Allnutt, photography
+                %li
+                  %a{:href => "http://www.flickr.com/photos/kdixon/"} Kate Dixon, photography
   = yield
   %footer
     .row
@@ -74,3 +77,8 @@
             %br
               Application Development by 
               = link_to "Gemille Ford", "http://gemilleford.com/"
+
+  <!-- jQuery -->
+  %script.src =>"js/jquery.js"
+  <!-- Bootstrap Core JavaScript -->
+  %script.src =>"js/bootstrap.min.js"
