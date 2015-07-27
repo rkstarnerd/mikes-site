@@ -5,8 +5,6 @@
     .col-lg-12
       %h1.page-header
         Artist Statements
-        %br
-        %small Spring, 2009
       %ol.breadcrumb
         %li
           %a{:href => "#{root_path}"} Home
@@ -14,9 +12,20 @@
   / /.row
   / Intro Content
   .row
-    .col-md-6
-      %h2 Room Portraits and Rooftops
-      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.
-      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!
-      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?
+    .col-md-12
+      %h2 Michael Dixon
+      %h3 Room Portraits and Rooftops, Spring 2009
+      %p I believe I share with the majority of painters a tremendous love of the abstract stuff of the world that painting addresses:  edges, planes, masses, forms, lines, passages, light and shadow.  My inspiration for painting comes from direct observation of this “stuff.”  The subject for a painting can be anything, but it helps to love the subject and to spend a lot of time with it.  Even more important than the choice of subject is to find a relatively quiet, secure, solitary place to work.
+      %p I have always loved looking out of windows from a dark room.  I love the feeling of the light spilling into the room, particularly on a bright, overcast day; feeling, tactilely, the light on my face; seeing it spread across counters, desk, chairs, the floor.  This light feels holy.  One of my fondest memories is visiting the Friars’ cells at the Convent of San Marco in Florence.  Each cell contains one small window, set into a thick wall, which illuminates the bare room, and one simple, exquisite fresco by Fra Angelico.  The simplicity, austerity and holiness of this place are indescribable.  It is a feeling I would like to recreate.
+      %p Another favorite subject is the view of the city from a rooftop.  Last fall I spent several weeks on the rooftops of two buildings in the Fairlie-Poplar section of downtown Atlanta.  I worked in oils and watercolors onsite, and then used these small works as springboards for larger paintings in the studio.  The work done onsite this time was mostly quite realistic, quite detailed.  But with the cityscapes made in the studio, I allowed myself to work from a more intuitive level. 
+      %p  I like to work abstractly, and have done so for quite a few years.  When I do, however, the paintings are not pure abstraction; rather they use some very specific subject, in this case the view from the rooftop, as a structure.  I suppose, instead of an abstraction, I am after a different kind of realism—one that feels truer to the exhilaration of being on the roof, of sweeping your eye, and your brush, across the vast expanse, of the mass of blocky forms piling up on each other to the horizon, of the vertiginous view of the street far below, sweeping into the distance, of taking in the whole scene all at once.  
+      %p For me, to paint is to root around in the unconscious, to try to bring unconscious contents to light.  This is true no matter what the painting. But I suppose it’s particularly true in the abstractions.  I often feel very raw and vulnerable, particularly in the later stages of a painting for this reason.  I know very little about what this “rooting around” process means or where it leads.  I do know that the whole gamut of emotions go with it, from sublime elation to something close to despair.  I try not to attach to either, and count myself incredibly fortunate to be granted the opportunity to engage this pursuit.  Thanks for your interest.  
   / /.row
+  / Related Projects Row
+  .row
+    .col-lg-12
+    /   %h3.page-header #{@painting.category.name}
+    / - @painting.category.paintings.shuffle.first(4).each do |painting|
+    /   .col-sm-3.col-xs-6
+    /     %a{:href => "#"}
+    /       %img.img-responsive.img-hover.img-related{:alt => "", :src => "#{painting_path(painting)}"}
