@@ -9,17 +9,20 @@
   / Wrapper for slides
   .carousel-inner
     .item.active
-      .fill{:style => "background-image:url('#{@carousel_painting_one.large_img_url}');"}
-      .carousel-caption
-        %h2 Caption 1
+      %a{:href => "#{painting_path(@carousel_painting_one.id)}"}
+        .fill{:style => "background-image:url('#{@carousel_painting_one.large_img_url}');"}
+        .carousel-caption
+          %h2 #{@carousel_painting_one.title}
     .item
-      .fill{:style => "background-image:url('#{@carousel_painting_two.large_img_url}');"}
-      .carousel-caption
-        %h2 Caption 2
+      %a{:href => "#{painting_path(@carousel_painting_two.id)}"}
+        .fill{:style => "background-image:url('#{@carousel_painting_two.large_img_url}');"}
+        .carousel-caption
+          %h2 #{@carousel_painting_two.title}
     .item
-      .fill{:style => "background-image:url('#{@carousel_painting_three.large_img_url}');"}
-      .carousel-caption
-        %h2 Caption 3
+      %a{:href => "#{painting_path(@carousel_painting_three.id)}"}
+        .fill{:style => "background-image:url('#{@carousel_painting_three.large_img_url}');"}
+        .carousel-caption
+          %h2 #{@carousel_painting_three.title}
   / Controls
   %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"}
     %span.icon-prev
