@@ -21,7 +21,10 @@
         %li #{@painting.title}
         %li #{@painting.time_frame}
         %li #{@painting.medium} on #{@painting.surface}
-        %li Height: #{@painting.height}, Width: #{@painting.width} inches
+        - if !@painting.height.blank?
+          %li Height: #{@painting.height}, Width: #{@painting.width} inches
+        - else
+          %li Sizes varies
   / /.row
   / Related Projects Row
   .row
