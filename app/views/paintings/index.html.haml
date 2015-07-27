@@ -38,7 +38,8 @@
     - @categories.each do |category|
       .col-md-4.col-sm-6
         %a{:href => category_path(category.id)}
-          %img.img-responsive.img-portfolio.img-hover{:alt => "#{category.name}", :src => "http://placehold.it/700x450"}      
+          %text-muted #{category.name}
+          %img.img-responsive.img-portfolio.img-hover{:alt => "#{category.name}", :src => "#{category.paintings.first.small_img_url}"}
 / /.container
 / jQuery
 %script{:src => "js/jquery.js"}
