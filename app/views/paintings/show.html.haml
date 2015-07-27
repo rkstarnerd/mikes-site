@@ -14,7 +14,7 @@
   / Portfolio Item Row
   .row
     .col-md-8
-      = @painting.large_img_url
+      %img{ :src => "#{@painting.large_img_url}" }
     .col-md-4
       %h3 #{@painting.artist}
       %ul
