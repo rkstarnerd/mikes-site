@@ -31,18 +31,24 @@ Painting.create(artist: 'Michael Dixon', title: 'Margrave Bathroom', time_frame:
 
 #Paintings for Category 2
 Painting.create(artist: 'Michael Dixon', title: 'Apple Tree 1', time_frame: '2000', medium: 'oil', surface: 'canvas', small_img_url: "/thumbnails/tn_AppleTree1.jpg", large_img_url: "/paintings/AppleTree1.jpg", height: 36, width: 34, category_id: 2)
+Painting.create(artist: 'Michael Dixon', title: 'Apple Tree 2', time_frame: '2000', medium: 'oil', surface: 'canvas', small_img_url: "/thumbnails/tn_AppleTree2.jpg", large_img_url: "/paintings/AppleTree2.jpg", height: 38, width: 34, category_id: 2)
 
 #Paintings for Category 3
 Painting.create(artist: 'Michael Dixon', title: 'The Cabinet Shop', time_frame: '2001', medium: 'oil', surface: 'canvas', small_img_url: "/thumbnails/tn_CabinetShop.jpg", large_img_url: "/paintings/CabinetShop.jpg", height: 45, width: 51, category_id: 3)
+Painting.create(artist: 'Michael Dixon', title: 'Big Finishing Shop', time_frame: '2002', medium: 'oil', surface: 'canvas and panel', small_img_url: "/thumbnails/tn_finishingShop.jpg", large_img_url: "/paintings/BigFinishingShop.jpg", height: 42.5, width: 48, category_id: 3)
 
 #Paintings for Category 4
 Painting.create(artist: 'Michael Dixon', title: 'Lake Lanier 1: Wavy Cloud', time_frame: '2004', medium: 'gouache', surface: 'paper', small_img_url: "/thumbnails/tn_Lanier1.jpg", large_img_url: "/paintings/Lanier1.jpg", height: 9, width: 12, category_id: 4)
+Painting.create(artist: 'Michael Dixon', title: 'Lanier 2, Pink Clouds', time_frame: '2004', medium: 'gouache', surface: 'paper', small_img_url: "/thumbnails/tn_Lanier2PinkClouds.jpg", large_img_url: "/paintings/Lanier2PinkClouds.jpg", height: 9, width: 12, category_id: 4)
 
 #Paintings for Category 5
 Painting.create(artist: 'Michael Dixon', title: 'Still Life with Bit Brace', time_frame: '2008', medium: 'oil', surface: 'panel', small_img_url: "/thumbnails/tn_BitBrace.jpg", large_img_url: "/paintings/BitBrace w.jpg", height: 23, width: 32, category_id: 5)
+Painting.create(artist: 'Michael Dixon', title: 'Dia Center', time_frame: '2008', medium: 'oil', surface: 'panel', small_img_url: "/thumbnails/tn_DiaCenter2.jpg", large_img_url: "/paintings/DiaCenter2.jpg", height: 55, width: 72, category_id: 5)
 
 #Paintings for Category 6
 Painting.create(artist: 'Michael Dixon', title: 'Fairlie-Poplar', time_frame: '2009', medium: 'oil', surface: 'panel', small_img_url: "/thumbnails/tn_ViewFromtheGrantBldg.jpg", large_img_url: "/paintings/FairliePoplar.jpg", height: 48, width: 60, category_id: 6)
+Painting.create(artist: 'Michael Dixon', title: 'The Madison Building from the Grant', time_frame: '2008', medium: 'gouache', surface: 'paper', small_img_url: "/thumbnails/tn_MadisonFromGrant.jpg", large_img_url: "/paintings/MadisonFromGrant.jpg", height: 15, width: 20, category_id: 6)
 
 #Paintings for Category 7
 Painting.create(artist: 'Michael Dixon', title: 'Athens 1', time_frame: '2009', medium: 'oil', surface: 'panel', small_img_url: "/thumbnails/tn_Athens1.jpg", large_img_url: "/paintings/Athens1.jpg", height: 24, width: 32, category_id: 7)
+Painting.create(artist: 'Michael Dixon', title: 'Athens 2', time_frame: '2009', medium: 'oil', surface: 'panel', small_img_url: "/thumbnails/tn_Athens2.jpg", large_img_url: "/paintings/Athens2.jpg", height: 24, width: 32, category_id: 7)
