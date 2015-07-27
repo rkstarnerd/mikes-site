@@ -13,9 +13,15 @@ class PaintingsController < ApplicationController
 
   def show
     @painting = Painting.find(params[:id])
-    paintings_in_category = @painting.category.paintings.map do |painting|
+    
+    other_paintings_in_category = @painting.category.paintings.map do |painting|
       painting if painting != @painting
     end
-    @related_paintings = paintings_in_category.sample(4)
+    
+    if other_paintings_in_category.count > 4
+      @related_paintings = other_paintings_in_category.sample(4)
+    else
+      @related_paintings = other_paintings_in_category
+    end
   end
 end
