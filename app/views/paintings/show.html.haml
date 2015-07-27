@@ -26,8 +26,11 @@
   / Related Projects Row
   .row
     .col-lg-12
-      %h3.page-header #{@painting.category.name}
+      %h3.page-header 
+        #{@painting.category.name}
+        %small (related paintings)
     - @painting.category.paintings.shuffle.first(4).each do |painting|
       .col-sm-3.col-xs-6
-        %a{:href => "#"}
-          %img.img-responsive.img-hover.img-related{:alt => "", :src => "#{painting_path(painting)}"}
+        %a{:href => "#{painting_path(painting.id)}"}
+          %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
+          %br.center #{painting.title}
