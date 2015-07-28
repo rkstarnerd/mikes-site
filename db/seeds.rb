@@ -50,7 +50,7 @@ Painting.create(artist: 'Michael Dixon', title: 'Lake Lanier 1: Wavy Cloud', tim
 Painting.create(artist: 'Michael Dixon', title: 'Lanier 2, Pink Clouds', time_frame: '2004', medium: 'gouache', surface: 'paper', small_img_url: "/thumbnails/tn_Lanier2PinkClouds.jpg", large_img_url: "/paintings/Lanier2PinkClouds.jpg", height: 9, width: 12, category_id: 4)
 Painting.create(artist: 'Michael Dixon', title: 'Studio Sketch', time_frame: '2003', medium: 'oil', surface: 'canvas', small_img_url: "/thumbnails/tn_StudioSketch.jpg", large_img_url: "/paintings/StudioSketch.jpg", height: 18, width: 24, category_id: 4)
 Painting.create(artist: 'Michael Dixon', title: 'Still Life with African Sculpture', time_frame: '2004', medium: 'oil', surface: 'panel', small_img_url: "/thumbnails/tn_StillLifewAfricanStatue.jpg", large_img_url: "/paintings/StillLifewAfricanStatue.jpg", height: 24, width: 20, category_id: 4)
-Painting.create(artist: 'Michael Dixon', title: 'Cloud and Wires', time_frame: '2002', medium: 'gouache', surface: 'paper', small_img_url: "/thumbnails/#", large_img_url: "/paintings/#", height: 11, width: 14, category_id: 4)
+Painting.create(artist: 'Michael Dixon', title: 'Cloud and Wires', time_frame: '2002', medium: 'gouache', surface: 'paper', small_img_url: "/thumbnails/tn_CloudAndWires.jpg", large_img_url: "/paintings/Cloud&Wires.jpg", height: 11, width: 14, category_id: 4)
 
 #Paintings for Category 5
 Painting.create(artist: 'Michael Dixon', title: 'Still Life with Bit Brace', time_frame: '2008', medium: 'oil', surface: 'panel', small_img_url: "/thumbnails/tn_BitBrace.jpg", large_img_url: "/paintings/BitBrace w.jpg", height: 23, width: 32, category_id: 5)
