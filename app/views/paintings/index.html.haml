@@ -37,15 +37,6 @@
       %h2.page-header Art by Michael Dixon
     - @categories.each do |category|
       .col-md-4.col-sm-6
+        = category.name
         %a{:href => category_path(category.id)}
-          %img.img-responsive.img-portfolio.img-hover{:alt => "#{category.name}", :src => "http://placehold.it/700x450?text=" + "#{category.name}"}
-/ /.container
-/ jQuery
-%script{:src => "js/jquery.js"}
-/ Bootstrap Core JavaScript
-%script{:src => "js/bootstrap.min.js"}
-/ Script to Activate the Carousel
-:javascript
-  $('.carousel').carousel({
-      interval: 5000 //changes the speed
-  })
+          %img.img-responsive.img-portfolio.img-hover{:alt => "#{category.name}", :src => "#{category.paintings[4].small_img_url}"}
