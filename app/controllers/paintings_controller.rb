@@ -17,6 +17,8 @@ class PaintingsController < ApplicationController
     other_paintings_in_category = @painting.category.paintings.map do |painting|
       painting if painting != @painting
     end
+
+    other_paintings_in_category.compact!
     
     if other_paintings_in_category.count > 4
       @related_paintings = other_paintings_in_category.sample(4)
