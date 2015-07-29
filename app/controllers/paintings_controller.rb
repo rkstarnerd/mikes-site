@@ -25,10 +25,6 @@ class PaintingsController < ApplicationController
     
     other_paintings_in_category.compact!
     
-    if other_paintings_in_category.count > 4
-      @related_paintings = other_paintings_in_category.sample(4)
-    else
-      @related_paintings = other_paintings_in_category
-    end
+    @related_paintings = other_paintings_in_category.sample(4)
   end
 end
