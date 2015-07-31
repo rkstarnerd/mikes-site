@@ -12,7 +12,7 @@
   / /.row
   / Intro Content
   .row
-    <!-- Sidebar Column -->
+    / Sidebar Column
     .col-md-3
       %ul.nav.nav-tabs.nav-justified
         #myTab
@@ -39,7 +39,7 @@
             %a.data-toggle{:href => "#statement"} 
               .list-group-item Statement
 
-    <!-- Content Column -->
+    / Content Column
     %div#myTabContent.tab-content
       %div#rooftops.tab-pane.fade.active.in
         .col-md-9
@@ -50,42 +50,103 @@
           %p Another favorite subject is the view of the city from a rooftop.  Last fall I spent several weeks on the rooftops of two buildings in the Fairlie-Poplar section of downtown Atlanta.  I worked in oils and watercolors onsite, and then used these small works as springboards for larger paintings in the studio.  The work done onsite this time was mostly quite realistic, quite detailed.  But with the cityscapes made in the studio, I allowed myself to work from a more intuitive level. 
           %p  I like to work abstractly, and have done so for quite a few years.  When I do, however, the paintings are not pure abstraction; rather they use some very specific subject, in this case the view from the rooftop, as a structure.  I suppose, instead of an abstraction, I am after a different kind of realism—one that feels truer to the exhilaration of being on the roof, of sweeping your eye, and your brush, across the vast expanse, of the mass of blocky forms piling up on each other to the horizon, of the vertiginous view of the street far below, sweeping into the distance, of taking in the whole scene all at once.  
           %p For me, to paint is to root around in the unconscious, to try to bring unconscious contents to light.  This is true no matter what the painting. But I suppose it’s particularly true in the abstractions.  I often feel very raw and vulnerable, particularly in the later stages of a painting for this reason.  I know very little about what this “rooting around” process means or where it leads.  I do know that the whole gamut of emotions go with it, from sublime elation to something close to despair.  I try not to attach to either, and count myself incredibly fortunate to be granted the opportunity to engage this pursuit.  Thanks for your interest.
+      / Related Paintings Row
+      .row
+        .col-md-9.col-md-offset-3
+          %h3.page-header Room Portraits and Rooftops
+        - @rooftops.paintings.shuffle.first(3).each do |painting|
+          .col-sm-1.col-sm-offset-3
+            %a{:href => "#{painting_path(painting.id)}"}
+              %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
+              %br.center #{painting.title}
+      / Content Column
       %div#factories.tab-pane.fade
         .col-md-9
           %h2 Michael Dixon
           %h3 Factories, Fall 2008
           %p factories
+        / Related Paintings Row
+        .row
+          .col-md-9.col-md-offset-3
+            %h3.page-header Factories
+          - @factories.each do |painting|
+            .col-sm-1.col-sm-offset-3
+              %a{:href => "#{painting_path(painting.id)}"}
+                %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
+                %br.center #{painting.title}
+      / Content Column
       %div#people.tab-pane.fade
         .col-md-9
           %h2 Michael Dixon
           %h3 People, Spring 2006
-          %p factories
+          %p people
+        / Related Paintings Row
+        .row
+          .col-md-9.col-md-offset-3
+            %h3.page-header People
+          / - @factories.each do |painting|
+          /   .col-sm-1.col-sm-offset-3
+          /     %a{:href => "#{painting_path(painting.id)}"}
+          /       %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
+          /       %br.center #{painting.title}
+      / Content Column
       %div#cabinet_shop.tab-pane.fade
         .col-md-9
           %h2 Michael Dixon
           %h3 Cabinet Shop, Fall 2002
-          %p factories
+          %p cabinet shop
+        / Related Paintings Row
+        .row
+          .col-md-9.col-md-offset-3
+            %h3.page-header Factories
+            .col-sm-1.col-sm-offset-3
+              %a{:href => "#{painting_path(@cabinet_shop.id)}"}
+                %img.img-responsive.img-hover.img-related{:alt => "", :src => @cabinet_shop.small_img_url}
+                %br.center #{cabinet_shop.title}
+      / Content Column
       %div#apple_trees.tab-pane.fade
         .col-md-9
           %h2 Michael Dixon
           %h3 Apple Trees, Fall 2000
           %p factories
+        / Related Paintings Row
+        .row
+          .col-md-9.col-md-offset-3
+            %h3.page-header Factories
+          - @apple_trees.each do |painting|
+            .col-sm-1.col-sm-offset-3
+              %a{:href => "#{painting_path(painting.id)}"}
+                %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
+                %br.center #{painting.title}
+      / Content Column
       %div#thesis_statement.tab-pane.fade
         .col-md-9
           %h2 Michael Dixon
           %h3 Thesis Statement, Fall 1997
           %p factories
+        / Related Paintings Row
+        .row
+          .col-md-9.col-md-offset-3
+            %h3.page-header Factories
+          - @factories.each do |painting|
+            .col-sm-1.col-sm-offset-3
+              %a{:href => "#{painting_path(painting.id)}"}
+                %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
+                %br.center #{painting.title}
+      / Content Column
       %div#statement.tab-pane.fade
         .col-md-9
           %h2 Michael Dixon
           %h3 Statement, Fall 1995
           %p factories
+        / Related Paintings Row
+        .row
+          .col-md-9.col-md-offset-3
+            %h3.page-header Factories
+          - @factories.each do |painting|
+            .col-sm-1.col-sm-offset-3
+              %a{:href => "#{painting_path(painting.id)}"}
+                %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
+                %br.center #{painting.title}
   / /.row
-  / Related Projects Row
-  .row
-    .col-lg-12
-    /   %h3.page-header #{@painting.category.name}
-    / - @painting.category.paintings.shuffle.first(4).each do |painting|
-    /   .col-sm-3.col-xs-6
-    /     %a{:href => "#"}
-    /       %img.img-responsive.img-hover.img-related{:alt => "", :src => "#{painting_path(painting)}"}
+  
