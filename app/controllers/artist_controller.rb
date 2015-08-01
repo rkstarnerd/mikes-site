@@ -28,6 +28,6 @@ class ArtistController < ApplicationController
   end
 
   def apple_trees_subcategory
-    Category.find(2).paintings.map {|painting| if painting.title.include? "Apple"}
+    Category.find(2).paintings.map {|painting| painting if painting.title.include? "Apple"}
   end
 end
