@@ -2,7 +2,7 @@ class ArtistController < ApplicationController
   def statements
     @rooftops = rooftops_subcategory.compact!
     @factories = factories_subcategory.compact!
-    @cabinet_shop = 
+    @cabinet_shop = Painting.find(48)
     @apple_trees = apple_trees_subcategory.compact!
   end
 
