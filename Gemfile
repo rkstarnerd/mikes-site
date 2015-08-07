@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails'
-gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'uglifier', '>= 1.3.0'
@@ -25,6 +24,7 @@ group :development, :test do
   gem 'pry'
   gem 'pry-nav'
   gem 'rspec-rails', '2.99'
+  gem 'sqlite3'
 end
 
 group :test do
@@ -36,4 +36,5 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
