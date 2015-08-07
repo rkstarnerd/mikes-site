@@ -82,11 +82,11 @@
           / Related Paintings Row
           .row.spacer
             .col-md-9.col-md-offset-3
-            / - @factories.each do |painting|
-            /   .col-sm-3
-            /     %a{:href => "#{painting_path(painting.id)}"}
-            /       %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
-            /       %br.center #{painting.title}
+            - @people.each do |painting|
+              .col-sm-3
+                %a{:href => "#{painting_path(painting.id)}"}
+                  %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
+                  %br.center #{painting.title}
         %hr
         / Content Column
         .row.spacer
