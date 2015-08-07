@@ -1,6 +1,6 @@
 class ArtistController < ApplicationController
   def statements
-    @rooftops = rooftops_subcategory.compact!
+    @rooms_and_rooftops = rooms_and_rooftops_subcategory
     @factories = factories_subcategory.compact!
     @people = Category.find(4).paintings.all
     @cabinet_shop = Painting.find(48)
@@ -14,7 +14,7 @@ class ArtistController < ApplicationController
   def cv    
   end
 
-  def contact    
+  def contact   
   end
 
   def links    
@@ -22,8 +22,10 @@ class ArtistController < ApplicationController
 
   private
 
-  def rooftops_subcategory
-    Category.find(2).paintings.map {|p| p if !p.title.include? "Factory"}
+  def rooms_and_rooftops_subcategory
+    rooftops = Category.find(2).paintings.map {|p| p if !p.title.include? ("Factory" || "Cabinet")}
+    rooms = Category.find(3).paintings.map {|p| p}
+    rooftops.concat(rooms).compact!.shuffle
   end
 
   def factories_subcategory
