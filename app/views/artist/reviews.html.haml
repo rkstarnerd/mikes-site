@@ -19,13 +19,14 @@
       %p The progression in Michael Dixon’s work moves literally from a closet to the world.  The logic of the first few steps is compelling, from the shuttered interior of Summer Studio where the brilliant yellow light pressing at the windows activates the entire painting, to the open window of Banana Still Life to the open air of the final rooftop views of Bloomington, from downtown Sixth Street into the distances of campus buildings.  The pull of the outer light, the upper spaces, makes sense for his treatment:  the scale of his sweeping stroke wants to describe distance, size and surfaces, not the minutiae of still life.  His ambition is the opposite of kitsch; he wants to enlarge, not miniaturize.  The raw scrapings of the brush in Margrave Closet make the canvas feel naked, the stroke used up, compared to the fullness of Last Graham Plaza and Bloomington.  
       %p Dixon gets into issues of ugliness vs. beauty, finish vs. process, order vs. chaos (as does Hindle), and these are not easy issues to resolve.  Indeed, these paintings are sometimes difficult to look at, difficult to see.  Dixon may not have fully realized his subject yet, or found his color.   A painter like Marc Jacobson, for instance, working with similar subjects in his cityscapes, deals more explicitly with ideas of decay, and visual inertia as an occasion for inciting artistic invention.  But in the multiplication of form, Dixon makes his paintings about accretion, in the same organic way that cities devour and build themselves up, almost senselessly.  There is a sense of rush and motion in his elevated view of the square (even though the streets are empty of traffic), almost like time lapse photography.  Large objects like trees become phantasmal and transparent, open to the storefronts behind.
       %p After several treatments of the same city view, Dixon becomes assured and familiar enough to pull away the cloth of literal representation, leaving the sense of structure intact.  A Construction was painted away from the source, so in that sense is an abstraction, but everything is informed by the same spatial organization, the same descriptive brushwork and color.  The brilliant strips of blue at the top still feel like sky.  It’s and interesting stepping off point, and makes a smooth transition into the work of Sheila Silverstein.
+  %hr
 
-      / Related Paintings Row
-      .row.spacer
-        .col-md-9.col-md-offset-3
-        - @reviewed_paintings.each do |painting|
-          .col-sm-3
-            %a{:href => "#{painting_path(painting.id)}"}
-              %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
-              %br.center #{painting.title}
-      %hr
+  / Related Paintings Row
+  .row.spacer
+    .col-md-9.col-md-offset-3
+    - @reviewed_paintings.each do |painting|
+      .col-sm-3
+        %a{:href => "#{painting_path(painting.id)}"}
+          %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
+          %br.center #{painting.title}
+  %hr
