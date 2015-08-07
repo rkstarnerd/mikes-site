@@ -7,7 +7,7 @@ class ArtistController < ApplicationController
   end
 
   def reviews
-    @reviewed_paintings = [Painting.find(9), Painting.find(10), Painting.find(12), Painting.find(3)]
+    @reviewed_paintings = [Painting.find(41), Painting.find(42), Painting.find(44), Painting.find(12)]
   end
 
   def cv    
