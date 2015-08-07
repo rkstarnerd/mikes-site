@@ -51,7 +51,7 @@
         / Related Paintings Row
         .row.spacer
           .col-md-9.col-md-offset-3
-          - @rooftops.shuffle.first(4).each do |painting|
+          - @rooms_and_rooftops.shuffle.first(4).each do |painting|
             .col-sm-3
               %a{:href => "#{painting_path(painting.id)}"}
                 %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
