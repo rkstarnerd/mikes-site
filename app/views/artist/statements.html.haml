@@ -49,7 +49,7 @@
           %p  I like to work abstractly, and have done so for quite a few years.  When I do, however, the paintings are not pure abstraction; rather they use some very specific subject, in this case the view from the rooftop, as a structure.  I suppose, instead of an abstraction, I am after a different kind of realism—one that feels truer to the exhilaration of being on the roof, of sweeping your eye, and your brush, across the vast expanse, of the mass of blocky forms piling up on each other to the horizon, of the vertiginous view of the street far below, sweeping into the distance, of taking in the whole scene all at once.  
           %p For me, to paint is to root around in the unconscious, to try to bring unconscious contents to light.  This is true no matter what the painting. But I suppose it’s particularly true in the abstractions.  I often feel very raw and vulnerable, particularly in the later stages of a painting for this reason.  I know very little about what this “rooting around” process means or where it leads.  I do know that the whole gamut of emotions go with it, from sublime elation to something close to despair.  I try not to attach to either, and count myself incredibly fortunate to be granted the opportunity to engage this pursuit.  Thanks for your interest.
         / Related Paintings Row
-        .row
+        .row.spacer
           .col-md-9.col-md-offset-3
           - @rooftops.shuffle.first(4).each do |painting|
             .col-sm-3
@@ -57,14 +57,15 @@
                 %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
                 %br.center #{painting.title}
         / Content Column
-        .col-md-9
-          #factories.tab-pane.fade
-          %h3 Factories, Fall 2008
-          %p Like many painters I am fascinated with the tension between representation and abstraction.  The basic appeal for me has remained the same since I began: that colored mud slathered on a flat surface can be two things at once: colored mud and the illusion of lit forms in space. 
-          %p My inspiration comes from the world around me, particularly from the built environment, from which I often derive a terrific sense of drama.  When I was drawn to a place like the Southern States feed mill in Flowery Branch, Georgia, it wasn’t so much a matter of “There’s something I’d like to make a painting of;” it was rather more like “That looks like the painting I’m trying to make.”  All close warm and cool grays, great cylinders and cones, planes and thrusting linear forms, this over that on which the light drops down into a hole. It looked like Kafka’s Castle; like a great monument to something, both bulging up into the sky and crumbling down at the same time. Or the Lafarge concrete plant in Duluth: huge cubes and swooping conveyor belts and towers and tanks and grids—all yellows and grays blending into the surrounding piles of sand and gravel.
-          %p Painting often feels like a tightrope walk between control and abandon. To go too far into control is to slowly drain the life out of the painting, and to go too far the other way is to step off a cliff. One continually comes up against one’s own limits.  These are the moments, fraught with the risk of failure, that one tries most desperately to animate mud. 
+        .row.spacer
+          .col-md-9
+            #factories.tab-pane.fade
+            %h3 Factories, Fall 2008
+            %p Like many painters I am fascinated with the tension between representation and abstraction.  The basic appeal for me has remained the same since I began: that colored mud slathered on a flat surface can be two things at once: colored mud and the illusion of lit forms in space. 
+            %p My inspiration comes from the world around me, particularly from the built environment, from which I often derive a terrific sense of drama.  When I was drawn to a place like the Southern States feed mill in Flowery Branch, Georgia, it wasn’t so much a matter of “There’s something I’d like to make a painting of;” it was rather more like “That looks like the painting I’m trying to make.”  All close warm and cool grays, great cylinders and cones, planes and thrusting linear forms, this over that on which the light drops down into a hole. It looked like Kafka’s Castle; like a great monument to something, both bulging up into the sky and crumbling down at the same time. Or the Lafarge concrete plant in Duluth: huge cubes and swooping conveyor belts and towers and tanks and grids—all yellows and grays blending into the surrounding piles of sand and gravel.
+            %p Painting often feels like a tightrope walk between control and abandon. To go too far into control is to slowly drain the life out of the painting, and to go too far the other way is to step off a cliff. One continually comes up against one’s own limits.  These are the moments, fraught with the risk of failure, that one tries most desperately to animate mud. 
         / Related Paintings Row
-        .row
+        .row.spacer
           .col-md-9.col-md-offset-3
           - @factories.each do |painting|
             .col-sm-3
@@ -72,13 +73,14 @@
                 %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
                 %br.center #{painting.title}
         / Content Column
-        .col-md-9
-          #people.tab-pane.fade
-          %h3 People, Spring 2006
-          %p I haven’t painted people in a while.  For a long time I’ve done secret, spying drawings of people—on buses and subways, in restaurants, construction workers, my students taking a test, the men of Hank’s Sunday morning spiritual meeting, my wife Sarah sleeping or cooking or talking on the phone.  I don’t ask people to pose for me.  I’d like to say that that feels too artificial—that I want an art grounded in life, not grounded in the art studio.  Really it’s just that I get too self-conscious having anyone around while I work.  But I’ve wanted people back in my paintings, so I’ve gone back to working from memory and drawings as sources, rather than direct observation.  Of course the old saw still rules:  Paint What You Know, so the more time spent drawing from the subject the better luck I’ll have with the painting.  Memory is a funny thing.  If I’m exerting too much control I will quickly find myself in a blind alley.  But when I let go and kind of follow the paint, I can sometimes mess it around just enough that it strikes a sonorous chord with memory, which says, “Oh yeah, that’s more like it.”
-          %p I’ve come to believe that something happens in rooms with groups of people in them.  It can’t be helped.  Even if no one says or does anything, something always happens.  There is a presence that can be felt in that room, which comes from those people in that space, yet which is beyond them.  Thomas Merton wrote something to the effect that the difference between aesthetic versus religious experience is that the former is always attached to things; the latter to no thing.  As a painter I am blissfully attached to things, to objects, to the stuff of the world.  But I try to serve the presence that can be felt through objects, through the forms of people’s heads, through the spaces between things. 
+        .row.spacer
+          .col-md-9
+            #people.tab-pane.fade
+            %h3 People, Spring 2006
+            %p I haven’t painted people in a while.  For a long time I’ve done secret, spying drawings of people—on buses and subways, in restaurants, construction workers, my students taking a test, the men of Hank’s Sunday morning spiritual meeting, my wife Sarah sleeping or cooking or talking on the phone.  I don’t ask people to pose for me.  I’d like to say that that feels too artificial—that I want an art grounded in life, not grounded in the art studio.  Really it’s just that I get too self-conscious having anyone around while I work.  But I’ve wanted people back in my paintings, so I’ve gone back to working from memory and drawings as sources, rather than direct observation.  Of course the old saw still rules:  Paint What You Know, so the more time spent drawing from the subject the better luck I’ll have with the painting.  Memory is a funny thing.  If I’m exerting too much control I will quickly find myself in a blind alley.  But when I let go and kind of follow the paint, I can sometimes mess it around just enough that it strikes a sonorous chord with memory, which says, “Oh yeah, that’s more like it.”
+            %p I’ve come to believe that something happens in rooms with groups of people in them.  It can’t be helped.  Even if no one says or does anything, something always happens.  There is a presence that can be felt in that room, which comes from those people in that space, yet which is beyond them.  Thomas Merton wrote something to the effect that the difference between aesthetic versus religious experience is that the former is always attached to things; the latter to no thing.  As a painter I am blissfully attached to things, to objects, to the stuff of the world.  But I try to serve the presence that can be felt through objects, through the forms of people’s heads, through the spaces between things. 
           / Related Paintings Row
-          .row
+          .row.spacer
             .col-md-9.col-md-offset-3
             / - @factories.each do |painting|
             /   .col-sm-3
@@ -86,26 +88,28 @@
             /       %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
             /       %br.center #{painting.title}
         / Content Column
-        .col-md-9
-          #cabinet_shop.tab-pane.fade
-          %h3 Cabinet Shop, Fall 2002
-          %p I like to paint from direct observation; that is, I stand in front of and depict what I am looking at.  This is one of my personal rules:  to paint only what I am directly in front of.  (Of course rules are made to be broken, but I’ll stick with the rules here, not the exceptions.)  Another personal rule:  I paint what is close at hand.  I paint in places that are extremely familiar.  The more familiar and the more time spent in the place the better.  Once, while struggling with a creative writing project in elementary school, my mother suggested, “Write what you know.”  The advice has stuck with me.
-          %p My current studio is in the cabinet shop where I am employed.  I know this shop very well.  It’s in a century-old leatherworks building in Buford, Georgia (they once made saddles and harnesses there).  It has a lot of big windows, and was built with tremendous wooden floors and columns and joists.  Just now I am especially drawn to the finishing room in the shop, likely because this is where I do most of my work, finishing cabinets.  It is an incidentally white room:  everything in it is coated with a fine white dust.
-          %p The studio is a place of quiet contemplation, where one is alone and can both delve into, and try to abandon, one’s self.   I often feel that my goal is to merge myself with the subject of the painting; to eliminate the boundary between self and world.  I strive for naturalism--for facts--for the moment when colored mud on canvas suddenly becomes a floor, and can even account for the space between and the floor and my eyes.  And yet, often my work looks "abstract."  I believe, as Ellsworth Kelly puts it, that "if you can turn off the mind and look only with the eyes, ultimately everything becomes abstract."  I also believe that to depict the visible world means to abstract from the visible world.  The qualities of the world that I am most concerned with are perhaps its most abstract, namely space and light.
+        .row.spacer
+          .col-md-9
+            #cabinet_shop.tab-pane.fade
+            %h3 Cabinet Shop, Fall 2002
+            %p I like to paint from direct observation; that is, I stand in front of and depict what I am looking at.  This is one of my personal rules:  to paint only what I am directly in front of.  (Of course rules are made to be broken, but I’ll stick with the rules here, not the exceptions.)  Another personal rule:  I paint what is close at hand.  I paint in places that are extremely familiar.  The more familiar and the more time spent in the place the better.  Once, while struggling with a creative writing project in elementary school, my mother suggested, “Write what you know.”  The advice has stuck with me.
+            %p My current studio is in the cabinet shop where I am employed.  I know this shop very well.  It’s in a century-old leatherworks building in Buford, Georgia (they once made saddles and harnesses there).  It has a lot of big windows, and was built with tremendous wooden floors and columns and joists.  Just now I am especially drawn to the finishing room in the shop, likely because this is where I do most of my work, finishing cabinets.  It is an incidentally white room:  everything in it is coated with a fine white dust.
+            %p The studio is a place of quiet contemplation, where one is alone and can both delve into, and try to abandon, one’s self.   I often feel that my goal is to merge myself with the subject of the painting; to eliminate the boundary between self and world.  I strive for naturalism--for facts--for the moment when colored mud on canvas suddenly becomes a floor, and can even account for the space between and the floor and my eyes.  And yet, often my work looks "abstract."  I believe, as Ellsworth Kelly puts it, that "if you can turn off the mind and look only with the eyes, ultimately everything becomes abstract."  I also believe that to depict the visible world means to abstract from the visible world.  The qualities of the world that I am most concerned with are perhaps its most abstract, namely space and light.
         / Related Paintings Row
-        .row
+        .row.spacer
           .col-md-9.col-md-offset-3
             .col-sm-3
               %a{:href => "#{painting_path(@cabinet_shop.id)}"}
                 %img.img-responsive.img-hover.img-related{:alt => "", :src => @cabinet_shop.small_img_url}
                 /%br.center #{@cabinet_shop.title}
         / Content Column
-        .col-md-9
-          #apple_trees.tab-pane.fade
-          %h3 Apple Trees, Fall 2000
-          %p factories
+        .row.spacer
+          .col-md-9
+            #apple_trees.tab-pane.fade
+            %h3 Apple Trees, Fall 2000
+            %p factories
         / Related Paintings Row
-        .row
+        .row.spacer
           .col-md-9.col-md-offset-3
           - @apple_trees.first(3).each do |painting|
             .col-sm-3
@@ -113,10 +117,11 @@
                 %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
                 %br.center #{painting.title}
         / Content Column
-        .col-md-9
-          #thesis_statement.tab-pane.fade
-          %h3 Thesis Statement, Fall 1997
-          %p factories
+        .row.spacer
+          .col-md-9
+            #thesis_statement.tab-pane.fade
+            %h3 Thesis Statement, Fall 1997
+            %p factories
         / Content Column
         .col-md-9
           #statement.tab-pane.fade

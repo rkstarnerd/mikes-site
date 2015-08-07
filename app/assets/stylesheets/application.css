@@ -11,3 +11,7 @@
  *= require_self
  *= require_tree .
  */
+/*add space between rows*/
+.spacer {
+  margin-top: 45px;
+}
