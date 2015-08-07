@@ -9,6 +9,8 @@
       %ol.breadcrumb
         %li
           %a{:href => root_path} Home
+        %li 
+          %a{:href => category_path(@painting.category.id)} #{@painting.category.name}
         %li.active #{@painting.title}
   / /.row
   / Portfolio Item Row
