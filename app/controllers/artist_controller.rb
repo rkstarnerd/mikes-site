@@ -1,6 +1,6 @@
 class ArtistController < ApplicationController
   def statements
-    @rooftops = Category.find(6)
+    @rooftops = rooftops_subcategory.compact!
     @factories = factories_subcategory.compact!
     @cabinet_shop = Painting.find(21)
     @apple_trees = apple_trees_subcategory.compact!
@@ -19,6 +19,10 @@ class ArtistController < ApplicationController
   end
 
   private
+
+  def rooftops_subcategory
+    Category.find(6).paintings.map {|p| p if !p.title.include? "Tree"}
+  end
 
   def factories_subcategory
     Category.find(5).paintings.map {|p| p if p.title.include? "Factory"}
