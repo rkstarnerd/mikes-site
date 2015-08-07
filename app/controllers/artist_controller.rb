@@ -6,7 +6,8 @@ class ArtistController < ApplicationController
     @apple_trees = apple_trees_subcategory.compact!
   end
 
-  def reviews    
+  def reviews
+    @reviewed_paintings = [Painting.find(9), Painting.find(10), Painting.find(12), Painting.find(3)]
   end
 
   def cv    
