@@ -9,7 +9,6 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require bootstrap
  *= require modern-business
  *= require font-awesome
  *= require_tree .
@@ -33,4 +32,9 @@
 
 .back-to-top:hover {    
     background-color: rgba(135, 135, 135, 0.50);
+}
+
+.navbar-inverse {
+    background-color: #cccccc;
+    border-color: #b7b7b7;
 }
