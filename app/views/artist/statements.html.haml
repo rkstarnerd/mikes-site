@@ -53,9 +53,10 @@
           .col-md-9.col-md-offset-3
           - @rooms_and_rooftops.shuffle.first(4).each do |painting|
             .col-sm-3
-              %a{:href => "#{painting_path(painting.id)}"}
-                %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
-                %br.center #{painting.title}
+              %center
+                %a{:href => "#{painting_path(painting.id)}"}
+                  %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
+                  = painting.title
         %hr
         / Content Column
         .row.spacer
@@ -69,9 +70,10 @@
           .col-md-9.col-md-offset-3
           - @factories.each do |painting|
             .col-sm-3
-              %a{:href => "#{painting_path(painting.id)}"}
-                %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
-                %br.center #{painting.title}
+              %center
+                %a{:href => "#{painting_path(painting.id)}"}
+                  %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
+                  = painting.title
         %hr
         / Content Column
         .row.spacer
@@ -84,9 +86,10 @@
             .col-md-9.col-md-offset-3
             - @people.each do |painting|
               .col-sm-3
-                %a{:href => "#{painting_path(painting.id)}"}
-                  %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
-                  %br.center #{painting.title}
+                %center
+                  %a{:href => "#{painting_path(painting.id)}"}
+                    %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
+                    = painting.title
         %hr
         / Content Column
         .row.spacer
@@ -99,9 +102,10 @@
         .row.spacer
           .col-md-9.col-md-offset-3
             .col-sm-3
-              %a{:href => "#{painting_path(@cabinet_shop.id)}"}
-                %img.img-responsive.img-hover.img-related{:alt => "", :src => @cabinet_shop.small_img_url}
-                /%br.center #{@cabinet_shop.title}
+              %center
+                %a{:href => "#{painting_path(@cabinet_shop.id)}"}
+                  %img.img-responsive.img-hover.img-related{:alt => "", :src => @cabinet_shop.small_img_url}
+                  = @cabinet_shop.title
         %hr
         / Content Column
         .row.spacer
@@ -116,9 +120,10 @@
           .col-md-9.col-md-offset-3
           - @apple_trees.each do |painting|
             .col-sm-3
+            %center
               %a{:href => "#{painting_path(painting.id)}"}
                 %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
-                %br.center #{painting.title}
+                = painting.title
         %hr
         / Content Column
         .row.spacer
