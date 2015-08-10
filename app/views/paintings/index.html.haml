@@ -32,11 +32,12 @@
 .container
   / /.row
   / Portfolio Section
-  .row
-    .col-lg-12
+  .row-centered
+    .col-lg-12.col-centered
       %h2.page-header Art by Michael Dixon
     - @categories.each do |category|
-      .col-md-3.col-sm-6
-        = category.name
-        %a{:href => category_path(category.id)}
-          %img.img-responsive.img-portfolio.img-hover{:alt => "#{category.name}", :src => "#{category.paintings.first.small_img_url}"}
+      .col-md-3.col-sm-6.col-centered
+        %center
+          = category.name
+          %a{:href => category_path(category.id)}
+            %img.img-responsive.img-portfolio.img-hover{:alt => "#{category.name}", :src => "#{category.paintings.first.small_img_url}"}
