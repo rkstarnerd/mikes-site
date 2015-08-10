@@ -37,10 +37,11 @@
       %h2.page-header Art by Michael Dixon
     .portfolio-items.isotopeWrapper.clearfix
     - @categories.each do |category|
-      %article.col-md-3.col-sm-6.col-centered.isotopeItem.webdesign
-        %a.fancybox{:href => category_path(category.id)}
+      .col-md-3.col-sm-6.col-centered.isotopeItem.webdesign
+        %a{:href => category_path(category.id)} 
+          .fancybox
           .portfolio-item
-            %img.img-responsive.img-portfolio.img-hover{:alt => "#{category.name}", :src => "#{category.paintings.first.small_img_url}"}
+            %img.img-responsive.img-portfolio.img-hover.thumbnail{:alt => "#{category.name}", :src => "#{category.paintings.first.small_img_url}"}
             .portfolio-desc.align-center
               .folio-info
                 %p.center
