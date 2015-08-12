@@ -14,8 +14,9 @@
   - @category.paintings.each do |painting|
     .row
       .col-md-4.col-md-offset-2
-        %a{:href => "#{painting_path(painting.id)}"}
-          %img.img-responsive.img-hover.thumbnail{:alt => "", :src => painting.small_img_url}
+        %center
+          %a{:href => "#{painting_path(painting.id)}"}
+            %img.img-responsive.img-hover.thumbnail{:alt => "", :src => painting.small_img_url}
       .col-md-5
         %h3 #{painting.title}
         %h4 #{painting.time_frame}
