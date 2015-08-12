@@ -1,10 +1,10 @@
 class ArtistController < ApplicationController
   def statements
     @rooms_and_rooftops = rooms_and_rooftops_subcategory
-    @factories = factories_subcategory.compact!
-    @people = Category.find(4).paintings.all
+    @factories = factories_subcategory
+    @people = Category.find(4).paintings.all.sample(4)
     @cabinet_shop = Painting.find(48)
-    @apple_trees = apple_trees_subcategory.compact!
+    @apple_trees = apple_trees_subcategory
   end
 
   def reviews
@@ -23,16 +23,16 @@ class ArtistController < ApplicationController
   private
 
   def rooms_and_rooftops_subcategory
-    rooftops = Category.find(2).paintings.map {|p| p if !p.title.include? ("Factory" || "Cabinet")}
-    rooms = Category.find(3).paintings.map {|p| p}
-    rooftops.concat(rooms).compact!.shuffle
+    rooftops = Category.find(2).paintings.select {|painting| painting  unless painting.title.include? ("Factory" || "Cabinet")}
+    rooms = Category.find(3).paintings.all
+    rooftops.concat(rooms).shuffle
   end
 
   def factories_subcategory
-    Category.find(2).paintings.map {|p| p if p.title.include? "Factory"}
+    Category.find(2).paintings.select {|painting| painting if painting.title.include? "Factory"}
   end
 
   def apple_trees_subcategory
-    Category.find(1).paintings.map {|painting| painting if painting.title.include? "Apple"}
+    Category.find(1).paintings.select {|painting| painting if painting.title.include? "Apple"}
   end
 end
