@@ -38,13 +38,14 @@
     .portfolio-items.isotopeWrapper.clearfix
     - @categories.each do |category|
       .col-md-3.col-sm-6.col-centered.isotopeItem.webdesign
-        %a{:href => category_path(category.id)} 
-          .fancybox
-          .portfolio-item
-            %img.img-responsive.img-portfolio.img-hover.thumbnail{:alt => "#{category.name}", :src => "#{category.paintings.first.small_img_url}"}
-            .portfolio-desc.align-center
-              .folio-info
-                %p.center
-                  = category.name
+        %center
+          %a{:href => category_path(category.id)} 
+            .fancybox
+            .portfolio-item
+              %img.img-responsive.img-portfolio.img-hover.thumbnail{:alt => "#{category.name}", :src => "#{category.paintings.first.small_img_url}"}
+              .portfolio-desc.align-center
+                .folio-info
+                  %p.center
+                    = category.name
           
             
