@@ -42,4 +42,4 @@
           %a{:href => category_path(category.id)} 
             .portfolio-item
               %img.img-responsive.img-portfolio.img-hover.thumbnail{:alt => "#{category.name}", :src => "#{category.paintings.first.small_img_url}"}
-                = category.name
+                %h4 #{category.name}
