@@ -80,7 +80,6 @@ Painting.create(artist: 'Michael Dixon', title: 'Den', medium: 'oil', surface: '
 Painting.create(artist: 'Michael Dixon', title: 'The Study', medium: 'oil', surface: 'panel', small_img_url: "/thumbnails/tn_TheStudy.jpg", large_img_url: "/paintings/TheStudy.jpg", height: 32, width: 24, category_id: 3)
 Painting.create(artist: 'Michael Dixon', title: 'Studio with Furnace', medium: 'oil', surface: 'panel', small_img_url: "/thumbnails/tn_StudioWithFurnace.jpg", large_img_url: "/paintings/StudioWithFurnace.jpg", height: 26, width: 22, category_id: 3)
 Painting.create(artist: 'Michael Dixon', title: 'Studio Laundry', medium: 'oil', surface: 'panel', small_img_url: "/thumbnails/tn_StudioLaundry.jpg", large_img_url: "/paintings/StudioLaundry.jpg", height: 36, width: 48, category_id: 3)
-Painting.create(artist: 'Michael Dixon', title: 'Green Window', medium: 'oil', surface: 'panel', small_img_url: "/thumbnails/tn_GreenWindow.jpg", large_img_url: "/paintings/GreenWindow.jpg", height: 48, width: 38, category_id: 3)
 
 #Paintings for Category 4
 Painting.create(artist: 'Michael Dixon', title: 'Jay\'s House', medium: 'oil', surface: 'panel', small_img_url: "/thumbnails/tn_Jay\'sHouse.jpg", large_img_url: "/paintings/Jays_House.jpg", height: 42, width: 48, category_id: 4)
