@@ -18,6 +18,7 @@
           %a{:href => "#{painting_path(painting.id)}"}
             %img.img-responsive.img-hover.thumbnail{:alt => "", :src => painting.small_img_url}
       .col-md-5
+        %center
         %h3 #{painting.title}
         %br
         %a.btn.btn-primary{:href => "#{painting_path(painting.id)}"}
