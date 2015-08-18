@@ -120,10 +120,10 @@
           .col-md-9.col-md-offset-3
           - @apple_trees.each do |painting|
             .col-sm-3
-            %center
-              %a{:href => "#{painting_path(painting.id)}"}
-                %img.img-responsive.img-hover.img-related.thumbnail{:alt => "", :src => painting.small_img_url}
-                = painting.title
+              %center
+                %a{:href => "#{painting_path(painting.id)}"}
+                  %img.img-responsive.img-hover.img-related.thumbnail{:alt => "", :src => painting.small_img_url}
+                  = painting.title
         %hr
         / Content Column
         .row.spacer
