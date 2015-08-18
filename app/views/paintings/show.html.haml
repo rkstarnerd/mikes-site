@@ -5,7 +5,6 @@
     .col-lg-12
       %h1.page-header
         = @painting.title
-        %small #{@painting.time_frame}
       %ol.breadcrumb
         %li
           %a{:href => root_path} Home
@@ -21,7 +20,6 @@
       %h3 #{@painting.artist}
       %ul
         %li #{@painting.title}
-        %li #{@painting.time_frame}
         %li #{@painting.medium} on #{@painting.surface}
         - if !@painting.height.blank?
           %li Height: #{@painting.height}, Width: #{@painting.width} inches
