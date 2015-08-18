@@ -12,16 +12,16 @@
           = @category.name
   / /.row
   - @category.paintings.each do |painting|
-    - if (@category.paintings.index(painting) + 1) % 3 == 0
+    - if (@category.paintings.index(painting) + 1) % 4 == 0
       .row
-        .col-md-4.img-portfolio
+        .col-md-3.img-portfolio
           %center
             %a{:href => "#{painting_path(painting.id)}"}
               %img.img-responsive.img-hover.thumbnail{:src => painting.small_img_url}
               %a{:href => "#{painting_path(painting.id)}"}
                 %h4 #{painting.title}
     - else
-      .col-md-4.img-portfolio
+      .col-md-3.img-portfolio
         %center
           %a{:href => "#{painting_path(painting.id)}"}
             %img.img-responsive.img-hover.thumbnail{:src => painting.small_img_url}
