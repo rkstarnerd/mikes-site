@@ -36,5 +36,5 @@
       .col-sm-3.col-xs-6
         %center
           %a{:href => "#{painting_path(painting.id)}"}
-            %img.img-responsive.img-hover.img-related{:alt => "", :src => painting.small_img_url}
+            %img.img-responsive.img-hover.img-related.thumbnail{:alt => "", :src => painting.small_img_url}
             = painting.title
