@@ -35,17 +35,11 @@
   .row-centered
     .col-lg-12.col-centered
       %h2.page-header Art by Michael Dixon
-    .portfolio-items.isotopeWrapper.clearfix
+    .portfolio-items
     - @categories.each do |category|
-      .col-md-3.col-sm-6.col-centered.isotopeItem.webdesign
+      .col-md-3.col-sm-6.col-centered
         %center
           %a{:href => category_path(category.id)} 
-            .fancybox
             .portfolio-item
               %img.img-responsive.img-portfolio.img-hover.thumbnail{:alt => "#{category.name}", :src => "#{category.paintings.first.small_img_url}"}
-              .portfolio-desc.align-center
-                .folio-info
-                  %p.center
-                    = category.name
-          
-            
+                = category.name
