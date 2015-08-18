@@ -12,15 +12,20 @@
           = @category.name
   / /.row
   - @category.paintings.each do |painting|
-    .row
-      .col-md-4.col-md-offset-2
+    - if (@category.paintings.index(painting) + 1) % 3 == 0
+      .row
+        .col-md-4.img-portfolio
+          %center
+            %a{:href => "#{painting_path(painting.id)}"}
+              %img.img-responsive.img-hover.thumbnail{:src => painting.small_img_url}
+              %a{:href => "#{painting_path(painting.id)}"}
+                %h4 #{painting.title}
+    - else
+      .col-md-4.img-portfolio
         %center
           %a{:href => "#{painting_path(painting.id)}"}
-            %img.img-responsive.img-hover.thumbnail{:alt => "", :src => painting.small_img_url}
-      .col-md-6
-        %center
-        %h3 #{painting.title}
-        %a.btn.btn-primary{:href => "#{painting_path(painting.id)}"}
-          View Painting
+            %img.img-responsive.img-hover.thumbnail{:src => painting.small_img_url}
+            %a{:href => "#{painting_path(painting.id)}"}
+              %h4 #{painting.title}
     / /.row
     %hr
