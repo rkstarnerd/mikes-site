@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 category_list = {
-  1 => "Landscapes", 2 => "Factories/Cityscapes", 3 => "Interiors", 4 => "People"
+  1 => "Landscapes", 2 => "Cityscapes", 3 => "Interiors", 4 => "People"
 }
 
 category_list.each do |id, name| 
