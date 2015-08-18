@@ -34,6 +34,10 @@
     background-color: rgba(135, 135, 135, 0.50);
 }
 
+ul {
+  list-style-type: none;
+}
+
 /*Category Items on Index*/
 .isotopeWrapper article{
   margin-bottom: 30px;
