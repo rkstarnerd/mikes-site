@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150723003042) do
+ActiveRecord::Schema.define(version: 20150818164438) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20150723003042) do
   create_table "paintings", force: :cascade do |t|
     t.string   "artist"
     t.string   "title"
-    t.string   "time_frame"
     t.string   "medium"
     t.string   "surface"
     t.string   "small_img_url"
