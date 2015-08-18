@@ -82,10 +82,6 @@ Painting.create(artist: 'Michael Dixon', title: 'Studio with Furnace', medium: '
 Painting.create(artist: 'Michael Dixon', title: 'Studio Laundry', medium: 'oil', surface: 'panel', small_img_url: "/thumbnails/tn_StudioLaundry.jpg", large_img_url: "/paintings/StudioLaundry.jpg", height: 36, width: 48, category_id: 3)
 
 #Paintings for Category 4
-Painting.create(artist: 'Michael Dixon', title: 'Jay\'s House', medium: 'oil', surface: 'panel', small_img_url: "/thumbnails/tn_Jay\'sHouse.jpg", large_img_url: "/paintings/Jays_House.jpg", height: 42, width: 48, category_id: 4)
-Painting.create(artist: 'Michael Dixon', title: 'Patrick', medium: 'acrylic', surface: 'paper or panel', small_img_url: "/thumbnails/tn_Patrick.jpg", large_img_url: "/paintings/Patrick.jpg", category_id: 4)
-Painting.create(artist: 'Michael Dixon', title: 'Tom & Patrick', medium: 'acrylic', surface: 'paper or panel', small_img_url: "/thumbnails/tn_Tom_Patrick.jpg", large_img_url: "/paintings/Tom&Patrick.jpg", category_id: 4)
-Painting.create(artist: 'Michael Dixon', title: 'Steve P.', medium: 'acrylic', surface: 'paper or panel', small_img_url: "/thumbnails/tn_SteveP.jpg", large_img_url: "/paintings/SteveP.jpg", category_id: 4)
 Painting.create(artist: 'Michael Dixon', title: 'Sunday Meeting', medium: 'oil', surface: 'panel', small_img_url: "/thumbnails/tn_SundayMeeting.jpg", large_img_url: "/paintings/SundayMeeting.jpg", height: 48, width: 96, category_id: 4)
 Painting.create(artist: 'Michael Dixon', title: 'East Buford', medium: 'graphite', surface: 'paper', small_img_url: "/thumbnails/tn_Drg_EastBuford.jpg", large_img_url: "/paintings/people_drawings/Drg_EastBuford.jpg", category_id: 4)
 Painting.create(artist: 'Michael Dixon', title: 'Bill', medium: 'graphite', surface: 'paper', small_img_url: "/thumbnails/tn_Bill.jpg", large_img_url: "/paintings/people_drawings/Bill.jpg", category_id: 4)
