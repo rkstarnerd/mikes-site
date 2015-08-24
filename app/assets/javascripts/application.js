@@ -27,10 +27,25 @@ jQuery(document).ready(function() {
             jQuery('.back-to-top').fadeOut(duration);
         }
     });
-    
+
     jQuery('.back-to-top').click(function(event) {
         event.preventDefault();
         jQuery('html, body').animate({scrollTop: 0}, duration);
         return false;
     });
+});
+
+//zoom into painting
+$(document).ready(function() {
+  $('#img-zoom').width(200);
+  $('#img-zoom').mouseover(function() {
+    $(this).css("cursor", "pointer");
+    $(this).animate({width: "500px"},
+      'slow');
+  });
+
+  $('#img-zoom').mouseout(function () {
+    $(this).animate({width: "200px"},
+      'slow');
+  });
 });
