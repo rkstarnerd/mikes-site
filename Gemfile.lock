@@ -64,6 +64,7 @@ GEM
     coffee-script-source (1.9.1.1)
     database_cleaner (1.2.0)
     diff-lcs (1.2.5)
+    elevatezoom-rails (1.0.0)
     erubis (2.7.0)
     execjs (2.5.2)
     fabrication (2.13.2)
@@ -213,6 +214,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
   database_cleaner (= 1.2.0)
+  elevatezoom-rails (~> 1.0.0)
   fabrication (~> 2.13.1)
   faker (~> 1.4.3)
   font-awesome-rails (~> 4.3.0.0)
