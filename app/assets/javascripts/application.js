@@ -12,9 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.elevatezoom
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require jquery.elevatezoom
 //= require_tree .
 
 //back-to-top button
