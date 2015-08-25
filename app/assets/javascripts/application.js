@@ -37,16 +37,4 @@ jQuery(document).ready(function() {
 });
 
 //zoom into painting
-$(document).ready(function() {
-  $('#img-zoom').width(200);
-  $('#img-zoom').mouseover(function() {
-    $(this).css("cursor", "pointer");
-    $(this).animate({width: "500px"},
-      'slow');
-  });
-
-  $('#img-zoom').mouseout(function () {
-    $(this).animate({width: "200px"},
-      'slow');
-  });
-});
+$("#zoom_mw").elevateZoom({scrollZoom : true});
