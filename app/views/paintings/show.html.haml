@@ -16,22 +16,23 @@
   .row
     .col-md-8
       %center
-        %img#zoom_mw{ :src => "#{@painting.large_img_url}", data-zoom-image="@painting.magnified_img_url"}
+        %img#zoom_mw{ :src => "#{@painting.large_img_url}", "data-zoom-image" => "#{@painting.magnified_img_url}"}
     .col-md-4
       %h3 #{@painting.artist}
       %ul
         %li #{@painting.title}
         %li #{@painting.medium} on #{@painting.surface}
-        - if !@painting.height.blank?
-          %li Height: #{@painting.height}, Width: #{@painting.width} inches
-        - else
+        - if @painting.height.blank?
           %li Sizes vary
+        - else
+          %li Height: #{@painting.height}, Width: #{@painting.width} inches
+
   / /.row
   / Related Projects Row
   .row
     .col-lg-12
       %h3.page-header
-        #{@painting.category.name}
+        = link_to "#{@painting.category.name}", category_path(@painting.category.id)
         %small (related paintings)
     - @related_paintings.each do |painting|
       .col-sm-3.col-xs-6
