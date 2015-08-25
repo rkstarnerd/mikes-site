@@ -9,7 +9,7 @@ category_list = {
   1 => "Landscapes", 2 => "Cityscapes", 3 => "Interiors", 4 => "People"
 }
 
-category_list.each do |id, name| 
+category_list.each do |id, name|
   Category.create(id: id, name: name)
 end
 
@@ -44,7 +44,7 @@ Painting.create(artist: 'Michael Dixon', title: 'Fairlie-Poplar', medium: 'oil',
 Painting.create(artist: 'Michael Dixon', title: 'The Madison Building from the Grant', medium: 'gouache', surface: 'paper', small_img_url: "/thumbnails/tn_MadisonFromGrant.jpg", large_img_url: "/paintings/MadisonFromGrant.jpg", height: 15, width: 20, category_id: 2)
 Painting.create(artist: 'Michael Dixon', title: 'Grant Building Looking North', medium: 'gouache', surface: 'paper', small_img_url: "/thumbnails/tn_GrantLookingNorth.jpg", large_img_url: "/paintings/GrantLookingNorth.jpg", height: 15, width: 20, category_id: 2)
 Painting.create(artist: 'Michael Dixon', title: 'View from the William Oliver Building', medium: 'gouache', surface: 'paper', small_img_url: "/thumbnails/tn_WilliamOliver.jpg", large_img_url: "/paintings/WilliamOliver.jpg", height: 15, width: 20, category_id: 2)
-Painting.create(artist: 'Michael Dixon', title: 'Auburn Avenue', medium: 'gouache', surface: 'paper', small_img_url: "/thumbnails/tn_AuburnAve.jpg", large_img_url: "/paintings/Flatiron,AuburnAve.jpg", height: 15, width: 20, category_id: 2)
+Painting.create(artist: 'Michael Dixon', title: 'Auburn Avenue', medium: 'gouache', surface: 'paper', small_img_url: "/thumbnails/tn_AuburnAve.jpg", large_img_url: "/paintings/Flatiron_AuburnAve.jpg", height: 15, width: 20, category_id: 2)
 Painting.create(artist: 'Michael Dixon', title: 'Walton Street', medium: 'gouache', surface: 'paper', small_img_url: "/thumbnails/tn_WaltonSt.jpg", large_img_url: "/paintings/WaltonSt.jpg", height: 9, width: 12, category_id: 2)
 Painting.create(artist: 'Michael Dixon', title: 'Cone and Walton Streets', medium: 'gouache', surface: 'paper', small_img_url: "/thumbnails/tn_ConeandWaltonStreets.jpg", large_img_url: "/paintings/ConeandWaltonStreets.jpg", height: 14, width: 11, category_id: 2)
 Painting.create(artist: 'Michael Dixon', title: 'Athens 1', medium: 'oil', surface: 'panel', small_img_url: "/thumbnails/tn_Athens1.jpg", large_img_url: "/paintings/Athens1.jpg", height: 24, width: 32, category_id: 2)
@@ -67,7 +67,7 @@ Painting.create(artist: 'Michael Dixon', title: 'The Junkshed', medium: 'oil', s
 Painting.create(artist: 'Michael Dixon', title: 'Kitchen Sink, Buford', medium: 'oil', surface: 'canvas', small_img_url: "/thumbnails/tn_KitchenSinkBuford.jpg", large_img_url: "/paintings/KitchenSinkBuford.jpg", height: 46, width: 36, category_id: 3)
 Painting.create(artist: 'Michael Dixon', title: 'The Cabinet Shop', medium: 'oil', surface: 'canvas', small_img_url: "/thumbnails/tn_CabinetShop.jpg", large_img_url: "/paintings/CabinetShop.jpg", height: 45, width: 51, category_id: 3)
 Painting.create(artist: 'Michael Dixon', title: 'Big Finishing Shop', medium: 'oil', surface: 'canvas and panel', small_img_url: "/thumbnails/tn_finishingShop.jpg", large_img_url: "/paintings/BigFinishingShop.jpg", height: 42.5, width: 48, category_id: 3)
-Painting.create(artist: 'Michael Dixon', title: 'The Drying Rack', medium: 'oil', surface: 'canvas', small_img_url: "/thumbnails/tn_DryingRack.jpg", large_img_url: "/paintings/DryingRack.jpg", height: 18, width: 24, category_id: 3) 
+Painting.create(artist: 'Michael Dixon', title: 'The Drying Rack', medium: 'oil', surface: 'canvas', small_img_url: "/thumbnails/tn_DryingRack.jpg", large_img_url: "/paintings/DryingRack.jpg", height: 18, width: 24, category_id: 3)
 Painting.create(artist: 'Michael Dixon', title: 'The Compressor', medium: 'oil', surface: 'panel', small_img_url: "/thumbnails/tn_Compressor.jpg", large_img_url: "/paintings/Compressor.jpg", height: 24, width: 22, category_id: 3)
 Painting.create(artist: 'Michael Dixon', title: 'Main St. Studio', medium: 'oil', surface: 'canvas', small_img_url: "/thumbnails/tn_MainStStudio.jpg", large_img_url: "/paintings/MainStStudio.jpg", height: 11, width: 14, category_id: 3)
 Painting.create(artist: 'Michael Dixon', title: 'Studio Sketch', medium: 'oil', surface: 'canvas', small_img_url: "/thumbnails/tn_StudioSketch.jpg", large_img_url: "/paintings/StudioSketch.jpg", height: 18, width: 24, category_id: 3)
