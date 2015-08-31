@@ -10,7 +10,6 @@
  *
  *= require_self
  *= require modern-business
- *= require font-awesome
  *= require_tree .
  */
 /*add space between rows*/
@@ -30,7 +29,7 @@
     display: none;
 }
 
-.back-to-top:hover {    
+.back-to-top:hover {
     background-color: rgba(135, 135, 135, 0.50);
 }
 
