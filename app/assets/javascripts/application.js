@@ -35,6 +35,4 @@ jQuery(document).ready(function() {
 });
 
 //zoom into painting
-$(document).ready(function () {
-  $("#zoom_mw").elevateZoom({scrollZoom : true});
-});
+$("#zoom_mw").elevateZoom({scrollZoom : true});
