@@ -9,8 +9,8 @@
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
-//
-//= require jquery_ujs
+//= require jquery
+//= require jquery.elevatezoom
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
@@ -35,4 +35,6 @@ jQuery(document).ready(function() {
 });
 
 //zoom into painting
-$("#zoom_mw").elevateZoom({scrollZoom : true});
+$(document).ready(function () {
+  $("#zoom_mw").elevateZoom({scrollZoom : true});
+});
