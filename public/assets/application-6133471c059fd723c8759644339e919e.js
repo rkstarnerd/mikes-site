@@ -9384,7 +9384,7 @@ if ( typeof Object.create !== 'function' ) {
 						+ "margin-top: " + String(borderWidth) + ";"         
 						+ "background-position: 0px 0px;"
 						+ "width: " + String(self.nzWidth) + "px;"
-						+ "height: " + String(self.nzHeight)
+						+ "height: " + String(self.nzHeight) + "px;"
 						+ "px;float: left;"
 						+ "display: none;"
 						+ "cursor:"+(self.options.cursor)+";"
@@ -9660,6 +9660,7 @@ if ( typeof Object.create !== 'function' ) {
 				}).mouseleave(function(){
 					if(!self.scrollLock){
 						self.setElements("hide");
+            self.options.onDestroy(self.$elem);
 					}
 				});
 				//end ove image
@@ -9822,11 +9823,11 @@ if ( typeof Object.create !== 'function' ) {
 								lensHeight = String((self.options.zoomWindowHeight/self.heightRatio))
 							}
 
-							if(self.options.zoomWindowWidth < self.options.zoomWindowWidth){
+							if(self.nzWidth < self.options.zoomWindowHeight/self.heightRatio){
 								lensWidth = self.nzWidth;
 							}       
 							else{
-								lensWidth =  (self.options.zoomWindowWidth/self.widthRatio);
+								lensWidth =  String((self.options.zoomWindowWidth/self.widthRatio));
 							}            
 
 							self.zoomLens.css('width', lensWidth);    
@@ -9871,7 +9872,7 @@ if ( typeof Object.create !== 'function' ) {
 				}
 
 				// if the mouse position of the slider is one of the outerbounds, then hide  window and lens
-				if (self.mouseLeft <= 0 || self.mouseTop < 0 || self.mouseLeft > self.nzWidth || self.mouseTop > self.nzHeight ) {				          
+				if (self.mouseLeft < 0 || self.mouseTop < 0 || self.mouseLeft > self.nzWidth || self.mouseTop > self.nzHeight ) {				          
 					self.setElements("hide");
 					return;
 				}
@@ -9883,8 +9884,8 @@ if ( typeof Object.create !== 'function' ) {
 					if(self.options.showLens) {
 						//		self.showHideLens("show");
 						//set background position of lens
-						self.lensLeftPos = String(self.mouseLeft - self.zoomLens.width() / 2);
-						self.lensTopPos = String(self.mouseTop - self.zoomLens.height() / 2);
+						self.lensLeftPos = String(Math.floor(self.mouseLeft - self.zoomLens.width() / 2));
+						self.lensTopPos = String(Math.floor(self.mouseTop - self.zoomLens.height() / 2));
 
 
 					}
@@ -9986,7 +9987,13 @@ if ( typeof Object.create !== 'function' ) {
 				if(change == "hide"){
 					if(self.isWindowActive){
 						if(self.options.zoomWindowFadeOut){
-							self.zoomWindow.stop(true, true).fadeOut(self.options.zoomWindowFadeOut);
+							self.zoomWindow.stop(true, true).fadeOut(self.options.zoomWindowFadeOut, function () {
+								if (self.loop) {
+									//stop moving the zoom window when zoom window is faded out
+									clearInterval(self.loop);
+									self.loop = false;
+								}
+							});
 						}
 						else{self.zoomWindow.hide();}
 						self.isWindowActive = false;        
@@ -10207,13 +10214,15 @@ if ( typeof Object.create !== 'function' ) {
 					}
 					// adjust images less than the window height
 
-					if(self.largeHeight < self.options.zoomWindowHeight){
+					if (self.options.zoomType == "window") {
+						if (self.largeHeight < self.options.zoomWindowHeight) {
 
-						self.windowTopPos = 0;
+							self.windowTopPos = 0;
+						}
+						if (self.largeWidth < self.options.zoomWindowWidth) {
+							self.windowLeftPos = 0;
+						}
 					}
-					if(self.largeWidth < self.options.zoomWindowWidth){
-						self.windowLeftPos = 0;
-					}       
 
 					//set the zoomwindow background position
 					if (self.options.easing){
@@ -10282,6 +10291,12 @@ if ( typeof Object.create !== 'function' ) {
 									self.scrollingLock = false;
 									self.loop = false;
 
+								}
+								else if (Math.round(Math.abs(self.xp - self.windowLeftPos) + Math.abs(self.yp - self.windowTopPos)) < 1) {
+									//stops micro movements
+									clearInterval(self.loop);
+									self.zoomWindow.css({ backgroundPosition: self.windowLeftPos + 'px ' + self.windowTopPos + 'px' });
+									self.loop = false;
 								}
 								else{
 									if(self.changeBgSize){    
@@ -10383,9 +10398,6 @@ if ( typeof Object.create !== 'function' ) {
 					self.largeHeight = newImg.height;
 					self.zoomImage = largeimage;
 					self.zoomWindow.css({ "background-size": self.largeWidth + 'px ' + self.largeHeight + 'px' });
-					self.zoomWindow.css({ "background-size": self.largeWidth + 'px ' + self.largeHeight + 'px' });
-
-
 					self.swapAction(smallimage, largeimage);
 					return;              
 				}          
@@ -10981,6 +10993,7 @@ if ( typeof Object.create !== 'function' ) {
 			cursor:"default", // user should set to what they want the cursor as, if they have set a click function
 			responsive:true,
 			onComplete: $.noop,
+      onDestroy: function() {},
 			onZoomedImageLoaded: function() {},
 			onImageSwap: $.noop,
 			onImageSwapComplete: $.noop
@@ -17401,6 +17414,4 @@ jQuery(document).ready(function() {
 });
 
 //zoom into painting
-$(document).ready(function () {
-  $("#zoom_mw").elevateZoom({scrollZoom : true});
-});
+$("#zoom_mw").elevateZoom({scrollZoom : true});
