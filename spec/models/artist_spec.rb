@@ -1,5 +1,7 @@
 require 'spec_helper'
 
 describe Artist do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should have_many(:reviews) }
+  it { should have_many(:statements) }
+  it { should have_many(:paintings) }
 end
