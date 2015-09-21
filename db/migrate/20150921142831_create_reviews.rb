@@ -1,7 +1,7 @@
 class CreateReviews < ActiveRecord::Migration
   def change
     create_table :reviews do |t|
-      t.string :title, :date, :description
+      t.string :title, :author, :date, :description
       t.timestamps null: false
     end
   end
