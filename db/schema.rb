@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150921140643) do
+ActiveRecord::Schema.define(version: 20150921141230) do
 
   create_table "artists", force: :cascade do |t|
     t.string   "username"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20150921140643) do
     t.integer  "artist_id"
   end
 
-  create_table "reviews", force: :cascade do |t|
+  create_table "statements", force: :cascade do |t|
     t.string   "title"
     t.string   "date"
     t.string   "description"
