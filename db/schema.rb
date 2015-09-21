@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150921141604) do
+ActiveRecord::Schema.define(version: 20150921142831) do
 
   create_table "artists", force: :cascade do |t|
     t.string   "username"
@@ -43,6 +43,15 @@ ActiveRecord::Schema.define(version: 20150921141604) do
     t.integer  "category_id"
     t.string   "magnified_img_url"
     t.integer  "artist_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string   "title"
+    t.string   "author"
+    t.string   "date"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "statements", force: :cascade do |t|
