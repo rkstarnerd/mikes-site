@@ -18,7 +18,7 @@
       %center
         %img#zoom_mw{ :src => "#{@painting.large_img_url}", "data-zoom-image" => "#{@painting.magnified_img_url}"}
     .col-md-4
-      %h3 #{@painting.artist}
+      %h3 #{@painting.artist.username}
       %ul
         %li #{@painting.title}
         %li #{@painting.medium} on #{@painting.surface}
