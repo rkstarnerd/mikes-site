@@ -18,11 +18,9 @@ class PaintingsController < ApplicationController
   private
 
   def related_paintings(painting)
-    other_paintings_in_category = painting.category.paintings.map do |one_painting|
+    other_paintings_in_category = painting.category.paintings.select do |one_painting|
       one_painting if one_painting != painting
     end
-
-    other_paintings_in_category.compact!
 
     @related_paintings = other_paintings_in_category.sample(4)
   end
