@@ -16,14 +16,14 @@
       .row
         .col-md-3.img-portfolio
           %center
-            %a{:href => "#{painting_path(painting.id)}"}
+            %a{:href => "#{painting_path(painting)}"}
               %img.img-responsive.img-hover.thumbnail{:src => painting.small_img_url}
-              %a{:href => "#{painting_path(painting.id)}"}
+              %a{:href => "#{painting_path(painting)}"}
                 %h4 #{painting.title}
     - else
       .col-md-3.img-portfolio
         %center
-          %a{:href => "#{painting_path(painting.id)}"}
+          %a{:href => "#{painting_path(painting)}"}
             %img.img-responsive.img-hover.thumbnail{:src => painting.small_img_url}
-            %a{:href => "#{painting_path(painting.id)}"}
+            %a{:href => "#{painting_path(painting)}"}
               %h4 #{painting.title}
