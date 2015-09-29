@@ -1,6 +1,6 @@
 
 class PaintingsController < ApplicationController
-  
+
   def index
     shuffled_paintings = Painting.all.shuffle
     @carousel_painting_one   = shuffled_paintings[0]
@@ -11,7 +11,7 @@ class PaintingsController < ApplicationController
   end
 
   def show
-    @painting = Painting.find(params[:id])
+    @painting = Painting.find_by(slug: params[:id])
     related_paintings(@painting)
   end
 
@@ -20,10 +20,10 @@ class PaintingsController < ApplicationController
   def related_paintings(painting)
     other_paintings_in_category = painting.category.paintings.map do |one_painting|
       one_painting if one_painting != painting
-    end 
-    
+    end
+
     other_paintings_in_category.compact!
-    
+
     @related_paintings = other_paintings_in_category.sample(4)
   end
 end
