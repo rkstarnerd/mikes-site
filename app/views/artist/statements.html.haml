@@ -17,25 +17,25 @@
       %ul#myTab.nav.nav-tabs.nav-justified
         .list-group
           %li.active
-            %a.data-toggle{:href => "#rooftops"} 
+            %a.data-toggle{:href => "#rooftops"}
               .list-group-item Room Portraits and Rooftops
           %li
-            %a.data-toggle{:href => "#factories"} 
+            %a.data-toggle{:href => "#factories"}
               .list-group-item Factories
           %li
-            %a.data-toggle{:href => "#people"} 
+            %a.data-toggle{:href => "#people"}
               .list-group-item People
           %li
-            %a.data-toggle{:href => "#cabinet_shop"} 
+            %a.data-toggle{:href => "#cabinet_shop"}
               .list-group-item Cabinet Shop
           %li
-            %a.data-toggle{:href => "#apple_trees"} 
+            %a.data-toggle{:href => "#apple_trees"}
               .list-group-item Apple Trees
           %li
-            %a.data-toggle{:href => "#thesis_statement"} 
+            %a.data-toggle{:href => "#thesis_statement"}
               .list-group-item Thesis Statement (excerpted)
           %li
-            %a.data-toggle{:href => "#statement"} 
+            %a.data-toggle{:href => "#statement"}
               .list-group-item Statement
 
     / Content Column
@@ -45,8 +45,8 @@
           %h3 Room Portraits and Rooftops
           %p I believe I share with the majority of painters a tremendous love of the abstract stuff of the world that painting addresses:  edges, planes, masses, forms, lines, passages, light and shadow.  My inspiration for painting comes from direct observation of this “stuff.”  The subject for a painting can be anything, but it helps to love the subject and to spend a lot of time with it.  Even more important than the choice of subject is to find a relatively quiet, secure, solitary place to work.
           %p I have always loved looking out of windows from a dark room.  I love the feeling of the light spilling into the room, particularly on a bright, overcast day; feeling, tactilely, the light on my face; seeing it spread across counters, desk, chairs, the floor.  This light feels holy.  One of my fondest memories is visiting the Friars’ cells at the Convent of San Marco in Florence.  Each cell contains one small window, set into a thick wall, which illuminates the bare room, and one simple, exquisite fresco by Fra Angelico.  The simplicity, austerity and holiness of this place are indescribable.  It is a feeling I would like to recreate.
-          %p Another favorite subject is the view of the city from a rooftop.  Last fall I spent several weeks on the rooftops of two buildings in the Fairlie-Poplar section of downtown Atlanta.  I worked in oils and watercolors onsite, and then used these small works as springboards for larger paintings in the studio.  The work done onsite this time was mostly quite realistic, quite detailed.  But with the cityscapes made in the studio, I allowed myself to work from a more intuitive level. 
-          %p  I like to work abstractly, and have done so for quite a few years.  When I do, however, the paintings are not pure abstraction; rather they use some very specific subject, in this case the view from the rooftop, as a structure.  I suppose, instead of an abstraction, I am after a different kind of realism—one that feels truer to the exhilaration of being on the roof, of sweeping your eye, and your brush, across the vast expanse, of the mass of blocky forms piling up on each other to the horizon, of the vertiginous view of the street far below, sweeping into the distance, of taking in the whole scene all at once.  
+          %p Another favorite subject is the view of the city from a rooftop.  Last fall I spent several weeks on the rooftops of two buildings in the Fairlie-Poplar section of downtown Atlanta.  I worked in oils and watercolors onsite, and then used these small works as springboards for larger paintings in the studio.  The work done onsite this time was mostly quite realistic, quite detailed.  But with the cityscapes made in the studio, I allowed myself to work from a more intuitive level.
+          %p  I like to work abstractly, and have done so for quite a few years.  When I do, however, the paintings are not pure abstraction; rather they use some very specific subject, in this case the view from the rooftop, as a structure.  I suppose, instead of an abstraction, I am after a different kind of realism—one that feels truer to the exhilaration of being on the roof, of sweeping your eye, and your brush, across the vast expanse, of the mass of blocky forms piling up on each other to the horizon, of the vertiginous view of the street far below, sweeping into the distance, of taking in the whole scene all at once.
           %p For me, to paint is to root around in the unconscious, to try to bring unconscious contents to light.  This is true no matter what the painting. But I suppose it’s particularly true in the abstractions.  I often feel very raw and vulnerable, particularly in the later stages of a painting for this reason.  I know very little about what this “rooting around” process means or where it leads.  I do know that the whole gamut of emotions go with it, from sublime elation to something close to despair.  I try not to attach to either, and count myself incredibly fortunate to be granted the opportunity to engage this pursuit.  Thanks for your interest.
         / Related Paintings Row
         .row.spacer
@@ -54,7 +54,7 @@
           - @rooms_and_rooftops.shuffle.first(4).each do |painting|
             .col-sm-3
               %center
-                %a{:href => "#{painting_path(painting.id)}"}
+                %a{:href => "#{painting_path(painting)}"}
                   %img.img-responsive.img-hover.img-related.thumbnail{:alt => "", :src => painting.small_img_url}
                   = painting.title
         %hr
@@ -62,16 +62,16 @@
         .row.spacer
           #factories.tab-pane.fade
           %h3 Factories
-          %p Like many painters I am fascinated with the tension between representation and abstraction.  The basic appeal for me has remained the same since I began: that colored mud slathered on a flat surface can be two things at once: colored mud and the illusion of lit forms in space. 
+          %p Like many painters I am fascinated with the tension between representation and abstraction.  The basic appeal for me has remained the same since I began: that colored mud slathered on a flat surface can be two things at once: colored mud and the illusion of lit forms in space.
           %p My inspiration comes from the world around me, particularly from the built environment, from which I often derive a terrific sense of drama.  When I was drawn to a place like the Southern States feed mill in Flowery Branch, Georgia, it wasn’t so much a matter of “There’s something I’d like to make a painting of;” it was rather more like “That looks like the painting I’m trying to make.”  All close warm and cool grays, great cylinders and cones, planes and thrusting linear forms, this over that on which the light drops down into a hole. It looked like Kafka’s Castle; like a great monument to something, both bulging up into the sky and crumbling down at the same time. Or the Lafarge concrete plant in Duluth: huge cubes and swooping conveyor belts and towers and tanks and grids—all yellows and grays blending into the surrounding piles of sand and gravel.
-          %p Painting often feels like a tightrope walk between control and abandon. To go too far into control is to slowly drain the life out of the painting, and to go too far the other way is to step off a cliff. One continually comes up against one’s own limits.  These are the moments, fraught with the risk of failure, that one tries most desperately to animate mud. 
+          %p Painting often feels like a tightrope walk between control and abandon. To go too far into control is to slowly drain the life out of the painting, and to go too far the other way is to step off a cliff. One continually comes up against one’s own limits.  These are the moments, fraught with the risk of failure, that one tries most desperately to animate mud.
         / Related Paintings Row
         .row.spacer
           .col-md-9.col-md-offset-3
           - @factories.each do |painting|
             .col-sm-4
               %center
-                %a{:href => "#{painting_path(painting.id)}"}
+                %a{:href => "#{painting_path(painting)}"}
                   %img.img-responsive.img-hover.img-related.thumbnail{:alt => "", :src => painting.small_img_url}
                   = painting.title
         %hr
@@ -80,14 +80,14 @@
           #people.tab-pane.fade
           %h3 People
           %p I haven’t painted people in a while.  For a long time I’ve done secret, spying drawings of people—on buses and subways, in restaurants, construction workers, my students taking a test, the men of Hank’s Sunday morning spiritual meeting, my wife Sarah sleeping or cooking or talking on the phone.  I don’t ask people to pose for me.  I’d like to say that that feels too artificial—that I want an art grounded in life, not grounded in the art studio.  Really it’s just that I get too self-conscious having anyone around while I work.  But I’ve wanted people back in my paintings, so I’ve gone back to working from memory and drawings as sources, rather than direct observation.  Of course the old saw still rules:  Paint What You Know, so the more time spent drawing from the subject the better luck I’ll have with the painting.  Memory is a funny thing.  If I’m exerting too much control I will quickly find myself in a blind alley.  But when I let go and kind of follow the paint, I can sometimes mess it around just enough that it strikes a sonorous chord with memory, which says, “Oh yeah, that’s more like it.”
-          %p I’ve come to believe that something happens in rooms with groups of people in them.  It can’t be helped.  Even if no one says or does anything, something always happens.  There is a presence that can be felt in that room, which comes from those people in that space, yet which is beyond them.  Thomas Merton wrote something to the effect that the difference between aesthetic versus religious experience is that the former is always attached to things; the latter to no thing.  As a painter I am blissfully attached to things, to objects, to the stuff of the world.  But I try to serve the presence that can be felt through objects, through the forms of people’s heads, through the spaces between things. 
+          %p I’ve come to believe that something happens in rooms with groups of people in them.  It can’t be helped.  Even if no one says or does anything, something always happens.  There is a presence that can be felt in that room, which comes from those people in that space, yet which is beyond them.  Thomas Merton wrote something to the effect that the difference between aesthetic versus religious experience is that the former is always attached to things; the latter to no thing.  As a painter I am blissfully attached to things, to objects, to the stuff of the world.  But I try to serve the presence that can be felt through objects, through the forms of people’s heads, through the spaces between things.
           / Related Paintings Row
           .row.spacer
             .col-md-9.col-md-offset-3
             - @people.each do |painting|
               .col-sm-3
                 %center
-                  %a{:href => "#{painting_path(painting.id)}"}
+                  %a{:href => "#{painting_path(painting)}"}
                     %img.img-responsive.img-hover.img-related.thumbnail{:alt => "", :src => painting.small_img_url}
                     = painting.title
         %hr
@@ -113,7 +113,7 @@
           %h3 Apple Trees
           %p For the past several months I have been making paintings of an apple tree in the backyard.  I work from life; that is, I stand in front of the tree and look at it, and the tree informs the decisions I make on canvas.
           %p The tree seems to me like an event, a spectacle.  The overall impact of the spectacle is the confluence of many factors:  the whirling gesture of the branches, towering overhead, sweeping forward and down in front, tangled and sagging under the weight of swelling apples; the rushing slope of the ground; being outside in the Georgia summer; the sky a white haze glaring through dark leaves; the ground cracking from drought; the shade at the base of the tree made luminous purple from the heat; sunlight on leaves like an amber syrup.
-          %p Oddly, the spectacle of the tree, the all-at-once sensation, where everything about the scene seems to fall into its proper place, tends to clarify and deepen after a long period of looking.  This is why I work from one source repeatedly, on many surfaces over many months.  Over time a structure, like a blueprint, becomes embedded in my mind.  The paintings are all of a piece, all different stops on the way to one assertion, one statement about this particular tree. 
+          %p Oddly, the spectacle of the tree, the all-at-once sensation, where everything about the scene seems to fall into its proper place, tends to clarify and deepen after a long period of looking.  This is why I work from one source repeatedly, on many surfaces over many months.  Over time a structure, like a blueprint, becomes embedded in my mind.  The paintings are all of a piece, all different stops on the way to one assertion, one statement about this particular tree.
           %p To isolate individual elements of the source, while required to some degree in the temporal construction of a painting, can mean denying the overall impact.  So I try to find  a way of working that feels true to being in the tree’s presence.  It means forgetting everything I thought I knew about how to paint (how to depict), and often seems to work against literal description.  Often it means working across the whole surface, tracing a course with my brush which echoes the path of my eyes.  Or sometimes it means painting without looking directly at the canvas, with the idea of getting at how the scene feels, in a tactile sense.  The goal is to move beyond mere description to arrive at an evocation.  To evoke a presence in paint.
         / Related Paintings Row
         .row.spacer
@@ -121,7 +121,7 @@
           - @apple_trees.each do |painting|
             .col-sm-3
               %center
-                %a{:href => "#{painting_path(painting.id)}"}
+                %a{:href => "#{painting_path(painting)}"}
                   %img.img-responsive.img-hover.img-related.thumbnail{:alt => "", :src => painting.small_img_url}
                   = painting.title
         %hr
@@ -131,7 +131,7 @@
           %h3 Thesis Statement (Excerpt)
           %p Painting is an assertion of self.  As the self’s relation to the world is subject to change from one moment and one context to the next, so should painting be subject to change.  Painting is a reflection of life.  A life is a sum of decisions and a by-product of opposing forces.  Painting is an attempted union of oppositions.
           %p I have always had a very strong need for solitude and a need to distance myself from my context.  Painting sets up a triangular relationship between my self, the world and the canvas.  The painting then becomes a record of my confrontation with the world.  I work from observation and am concerned with the act of perceiving.  Perception is an active, fluid, mutable, often transient phenomenon.  There are innumerable ways to perceive a scene, and I employ different modes at different times in a painting.  At times I might rapidly shake head and eyes, like a cat about to pounce, in order to gauge an object’s spatial position from many subtle shifts in points of view.  Or I might try to fixate on a single central point, in which case the scene frequently disintegrates into a color patterning that seems to deny a spatial reading.  To see entails seeing differences; nothing is seen except in relation to something else.
-          %p When I first got to Indiana I was tormented over what to depict, and even why to make depictions at all.  I was seized by a strong reductive impulse, where I wanted to pare everything down to something true, something personal, something about my looking.  I have always had a diaristic bent to the work—a desire to record the visual facts of my life.  The most immediate and obvious subject matter at this point was the studio.  Over time the studio came to represent different things, both sanctuary and battleground.  I see it now in the paintings as primarily a projection of the mind.  
+          %p When I first got to Indiana I was tormented over what to depict, and even why to make depictions at all.  I was seized by a strong reductive impulse, where I wanted to pare everything down to something true, something personal, something about my looking.  I have always had a diaristic bent to the work—a desire to record the visual facts of my life.  The most immediate and obvious subject matter at this point was the studio.  Over time the studio came to represent different things, both sanctuary and battleground.  I see it now in the paintings as primarily a projection of the mind.
           %p I’ve since broadened my scope by painting Bloomington cityscapes from a rooftop downtown.  I have also broken with the dogma of working directly from the source, and am painting from pencil drawings and memory.  Initially I wanted to inject the whole experience of being on the roof into one large painting.  The impulse was toward expansion as opposed to the earlier reduction.  I’ve become aware of the investment I’ve made, and of the questions:  can a representational painting carry the weight of ideas that I desire, and can it be believable?
           %p I aspire to make a painting so clearly about looking that it is also about the looker; that it becomes a representation of both perceiver and perceived.  The panorama incorporates different points of view that I often try to link by working from peripheral vision:  measuring and depicting one area while focusing on a central point.  The idea is that the scene will be realized more truthfully, the way a faint star is seen only by looking off to its side.  In periods of frustration I use an intuitive mark - a mark simply informed by a gut reaction to the scene – all over the surface, dismantling the image, with the hope that the result will be more believable:  less of a facile depiction and more about the way the scene feels.  Sometimes I fear I’ll be left with no image at all, or with no significant, informed correlation to perception.  I desire a continual building toward completion, but it is always a tenuous building, involving constant failure.
           %p While I have no creed for how paint is applied, i.e. thick or thin, transparent or opaque, I do believe it necessary to assert the material, so that marks of paint are charged with a tension between representation and abstraction.  I suppose this is a way of acknowledging the impossibility of the endeavor:  that in the end one is always left with just a painting – a trace – rather than the scene, or the seen, or the vision – itself.  I want the surface of a painting to be a unified fabric of interwoven marks through which one can peer into the history of the process.  Painting, like life, is a struggle.  The process and technique of painting I have arrived at will, I hope, provide a record of the struggle.
@@ -147,5 +147,5 @@
           %p The second challenge was how to use color.  I had always prided myself on my bold handling of color.  Using juxtapositions of bright, saturated color I tended to schematize the lights and darks of a painting.  But the colors I used were more or less arbitrary, rarely mixed beyond the secondaries, and were based more on a quick sensation that on sustained observation.  So, for a whole semester’s class at SAIC, I used a limited palette of black, white, yellow ochre and oxide red.  I now put much more effort into mixing colors to find differences.
           %p A consequence of facing these challenges is that now each painting requires a great deal more time.  In fact I never finish a painting so much as try to resolve it.  Even up to the last moment of the last session the painting must be susceptible to change—to a new record of a new observation.  The “completed” piece should, therefore, have a constant readiness; a constant coming-into-being.  One should not just see what is there; one should look for what could be there next.
   / /.row
-  %a.back-to-top{:href => "#"} 
+  %a.back-to-top{:href => "#"}
     %i.fa.fa-chevron-up
