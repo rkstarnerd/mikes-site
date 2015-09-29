@@ -9,17 +9,17 @@
   / Wrapper for slides
   .carousel-inner
     .item.active
-      %a{:href => "#{painting_path(@carousel_painting_one.id)}"}
+      %a{:href => "#{painting_path(@carousel_painting_one)}"}
         .fill{:style => "background-image:url('#{@carousel_painting_one.large_img_url}');"}
         .carousel-caption
           %h2 #{@carousel_painting_one.title}
     .item
-      %a{:href => "#{painting_path(@carousel_painting_two.id)}"}
+      %a{:href => "#{painting_path(@carousel_painting_two)}"}
         .fill{:style => "background-image:url('#{@carousel_painting_two.large_img_url}');"}
         .carousel-caption
           %h2 #{@carousel_painting_two.title}
     .item
-      %a{:href => "#{painting_path(@carousel_painting_three.id)}"}
+      %a{:href => "#{painting_path(@carousel_painting_three)}"}
         .fill{:style => "background-image:url('#{@carousel_painting_three.large_img_url}');"}
         .carousel-caption
           %h2 #{@carousel_painting_three.title}
@@ -34,13 +34,13 @@
   / Portfolio Section
   .row-centered
     .col-lg-12.col-centered
-      %h2.page-header 
+      %h2.page-header
         Art by Michael Dixon
     .portfolio-items
     - @categories.each do |category|
       .col-md-3.col-sm-6.col-centered
         %center
-          %a{:href => category_path(category.id)} 
+          %a{:href => category_path(category)}
             .portfolio-item
               %img.img-responsive.img-portfolio.img-hover.thumbnail{:alt => "#{category.name}", :src => "#{category.paintings.first.small_img_url}"}
                 %h4 #{category.name}
