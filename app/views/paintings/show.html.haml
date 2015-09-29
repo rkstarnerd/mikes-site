@@ -9,7 +9,7 @@
         %li
           %a{:href => root_path} Home
         %li
-          %a{:href => category_path(@painting.category.id)} #{@painting.category.name}
+          %a{:href => category_path(@painting.category)} #{@painting.category.name}
         %li.active #{@painting.title}
   / /.row
   / Portfolio Item Row
@@ -32,11 +32,11 @@
   .row
     .col-lg-12
       %h3.page-header
-        = link_to "#{@painting.category.name}", category_path(@painting.category.id)
+        = link_to "#{@painting.category.name}", category_path(@painting.category)
         %small (related paintings)
     - @related_paintings.each do |painting|
       .col-sm-3.col-xs-6
         %center
-          %a{:href => "#{painting_path(painting.id)}"}
+          %a{:href => "#{painting_path(painting)}"}
             %img.img-responsive.img-hover.img-related.thumbnail{:alt => "", :src => painting.small_img_url}
             = painting.title
