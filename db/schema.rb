@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929013938) do
+ActiveRecord::Schema.define(version: 20150929222059) do
 
   create_table "artists", force: :cascade do |t|
     t.string   "username"
@@ -30,8 +30,22 @@ ActiveRecord::Schema.define(version: 20150929013938) do
     t.string   "slug"
   end
 
-# Could not dump table "paintings" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "paintings", force: :cascade do |t|
+    t.string   "artist"
+    t.string   "title"
+    t.string   "medium"
+    t.string   "surface"
+    t.string   "small_img_url"
+    t.string   "large_img_url"
+    t.integer  "height"
+    t.integer  "width"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "category_id"
+    t.string   "magnified_img_url"
+    t.integer  "artist_id"
+    t.string   "slug"
+  end
 
   create_table "reviews", force: :cascade do |t|
     t.string   "title"
@@ -44,12 +58,10 @@ ActiveRecord::Schema.define(version: 20150929013938) do
   end
 
   create_table "statements", force: :cascade do |t|
-    t.string   "title"
-    t.string   "date"
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "artist_id"
+    t.string  "title"
+    t.string  "date"
+    t.string  "description"
+    t.integer "artist_id"
   end
 
 end
