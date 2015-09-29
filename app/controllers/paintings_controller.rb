@@ -2,7 +2,6 @@
 class PaintingsController < ApplicationController
 
   def index
-    shuffled_paintings = Painting.all.shuffle
     @carousel_painting_one   = shuffled_paintings[0]
     @carousel_painting_two   = shuffled_paintings[1]
     @carousel_painting_three = shuffled_paintings[2]
@@ -16,6 +15,13 @@ class PaintingsController < ApplicationController
   end
 
   private
+
+  def shuffled_paintings
+    carousel_paintings = Painting.all.select do |painting|
+      painting if !painting.large_img_url.include? 'people_drawings'
+    end
+    carousel_paintings.shuffle
+  end
 
   def related_paintings(painting)
     other_paintings_in_category = painting.category.paintings.select do |one_painting|
