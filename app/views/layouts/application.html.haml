@@ -70,6 +70,8 @@
             %li
               %a{:href => "#{signin_path}"}
                 %small Sign in
+%section.content.clearfix
+  = render 'shared/messages'
   = yield
   %hr
   %footer
