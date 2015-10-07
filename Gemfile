@@ -17,6 +17,10 @@ gem 'faker', '~> 1.4.3'
 gem 'haml', '~> 4.0.6'
 gem 'haml-rails', '~> 0.9.0'
 gem 'sluggable_gemille'
+gem 'devise'
+gem 'cancancan'
+gem 'rails_admin'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
